@@ -18,10 +18,10 @@ import {
   BookOpen,
   ExternalLink,
   Layers,
-  CheckCircle2,
   ArrowUpRight,
   GitBranch,
-  FileCode
+  FileCode,
+  KeyRound
 } from "lucide-react";
 
 export default function HomePage() {
@@ -36,32 +36,32 @@ export default function HomePage() {
             </div>
             <div>
               <div className="text-sm font-bold text-white tracking-tight flex items-center gap-2">
-                <span>Edge AI & Cloud Sandbox Atlas</span>
+                <span>Edge AI &amp; Cloud Sandbox Atlas</span>
                 <span className="hidden sm:inline-block text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                  Rev 5.0 Verified • Nov 2026
+                  100% Paid Tiers • US + CN Subsidized Logins
                 </span>
               </div>
               <div className="text-[11px] text-slate-400 hidden md:block">
-                Dots • OpenClaw • MicroVMs • Remote Browsers • DeepSeek Arbitrage • Mobile Control
+                Replit • Anthropic • Dots • Grok • Jules • Cursor • MicroVMs • Non-Major VMs • US/CN Coding Plans
               </div>
             </div>
           </div>
 
           <nav aria-label="Primary navigation" className="hidden lg:flex items-center gap-5 text-xs font-medium text-slate-300">
             <a href="#thesis" className="hover:text-white transition-colors">
-              1. The Sandbox Thesis
+              1. Big Players vs VMs
             </a>
             <a href="#widget-simulator" className="hover:text-indigo-300 transition-colors">
-              2. TCO Simulator
+              2. Paid Simulator
             </a>
             <a href="#workload-deep-dive" className="hover:text-white transition-colors">
-              3. 4 Workloads
+              3. 5 Workloads
             </a>
-            <a href="#deepseek-arbitrage" className="hover:text-emerald-300 transition-colors">
-              4. DeepSeek + VPS Combo
+            <a href="#subsidized-logins" className="hover:text-emerald-300 transition-colors">
+              4. US + CN Login Combo
             </a>
             <a href="#widget-provider-atlas" className="hover:text-cyan-300 transition-colors">
-              5. 19-Provider Atlas
+              5. 21-Provider Atlas
             </a>
             <a href="#pocket-control" className="hover:text-indigo-300 transition-colors">
               6. Phone VM Control
@@ -89,56 +89,57 @@ export default function HomePage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-indigo-300 mb-4">
             <span className="rounded-full bg-indigo-500/15 border border-indigo-500/30 px-3 py-1 font-semibold">
-              SYSTEMS ARCHITECTURE MONOGRAPH
+              SYSTEMS ARCHITECTURE MONOGRAPH • ZERO FREE-TIER RELIANCE
             </span>
             <span className="text-slate-500">•</span>
-            <span className="text-slate-400">24 Min Read</span>
+            <span className="text-slate-400">28 Min Read</span>
             <span className="text-slate-500">•</span>
-            <span className="text-emerald-400">4 Interactive JS Widgets + 5 Challenged Revisions</span>
+            <span className="text-emerald-400">21 Paid Compute Providers + 11 US/Chinese Subsidized LLM Plans</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
-            An LLM Without a Computer Is Just a Text Generator:{" "}
+            Stop Paying Per-Token API Taxes &amp; Stop Waiting on Free Tiers:{" "}
             <span className="bg-gradient-to-r from-indigo-400 via-cyan-300 to-emerald-400 bg-clip-text text-transparent">
-              The 2026 Cloud Sandbox, DeepSeek Arbitrage &amp; Pocket VM Atlas
+              The 2026 Paid Cloud Sandbox &amp; Subsidized LLM Login Atlas
             </span>
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed font-serif">
-            From OpenAI&apos;s always-on <strong>Dots</strong> ($100–$500/mo) and 90-millisecond{" "}
-            <strong>Firecracker MicroVMs</strong> (E2B, Modal, Daytona, Fly Sprites) to self-hosted{" "}
-            <strong>OpenClaw</strong> agents running on €5 European ARM servers paired with{" "}
-            <strong>DeepSeek V4.1 prefix caching</strong>—here is the definitive engineering breakdown of how much compute you actually get per dollar, which stack wins each workload, and how to command your cloud VM from your phone on a train.
+            How do <strong>Replit</strong>, <strong>Anthropic Claude Cloud</strong>,{" "}
+            <strong>OpenAI Dots</strong>, <strong>Google Jules</strong>, <strong>xAI SuperGrok</strong>,{" "}
+            <strong>Cursor</strong>, <strong>Devin/Windsurf</strong>, and <strong>GitHub Codespaces</strong>{" "}
+            stack up against a paid €6–€14 European NVMe VM when you log into your compute with a{" "}
+            <strong>flat-rate subsidized US + Chinese LLM subscription</strong> (Claude Pro/Max, ChatGPT Plus/Pro, Google AI Pro, Z.ai GLM-5.3, Alibaba Qwen Coder, Moonshot Kimi Code, MiniMax M2.5)?
           </p>
 
           {/* Key Quantitative Takeaways Strip */}
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
             <div className="rounded-xl bg-slate-900/90 border border-slate-800 p-3.5">
-              <div className="text-[11px] font-mono uppercase text-slate-400">Sovereign 24/7 Agent</div>
-              <div className="text-2xl font-mono font-bold text-emerald-400 mt-0.5">$11.62/mo</div>
+              <div className="text-[11px] font-mono uppercase text-emerald-400">US + CN Dual-Sub Sweet Spot</div>
+              <div className="text-2xl font-mono font-bold text-white mt-0.5">$44.20/mo</div>
               <div className="text-[11px] text-slate-400 mt-0.5">
-                Hetzner 8GB ARM ($7.50) + 75M Cached DeepSeek V4.1 Tokens ($4.12)
+                Netcup 8GB/256GB VM ($6.20) + Claude Pro ($20) + Z.ai GLM Plan ($18)
               </div>
             </div>
             <div className="rounded-xl bg-slate-900/90 border border-slate-800 p-3.5">
-              <div className="text-[11px] font-mono uppercase text-slate-400">Zero-Infra Arbitrage</div>
-              <div className="text-2xl font-mono font-bold text-cyan-400 mt-0.5">$4.12/mo</div>
+              <div className="text-[11px] font-mono uppercase text-cyan-400">Async Cloud VM Bargain</div>
+              <div className="text-2xl font-mono font-bold text-white mt-0.5">$19.99/mo</div>
               <div className="text-[11px] text-slate-400 mt-0.5">
-                Oracle OCI Always-Free (4 ARM / 24GB RAM) + DeepSeek Off-Peak
+                Google AI Pro: 15 Concurrent Jules Cloud VMs (100/day) + 1.5k CLI calls
               </div>
             </div>
             <div className="rounded-xl bg-slate-900/90 border border-slate-800 p-3.5">
-              <div className="text-[11px] font-mono uppercase text-slate-400">Burst MicroVM Winner</div>
-              <div className="text-2xl font-mono font-bold text-indigo-400 mt-0.5">$0.079/hr</div>
+              <div className="text-[11px] font-mono uppercase text-indigo-400">Heavy Marathon Stack</div>
+              <div className="text-2xl font-mono font-bold text-white mt-0.5">$134.50/mo</div>
               <div className="text-[11px] text-slate-400 mt-0.5">
-                Modal Sandboxes (first ~380 hrs/mo free via $30/mo credit)
+                Netcup 16GB/512GB ($15.50) + Claude Max 5x ($100) + MiniMax M2.5 ($19)
               </div>
             </div>
             <div className="rounded-xl bg-slate-900/90 border border-slate-800 p-3.5">
-              <div className="text-[11px] font-mono uppercase text-slate-400">GPU AI Factory Floor</div>
-              <div className="text-2xl font-mono font-bold text-amber-400 mt-0.5">$0.34/hr</div>
+              <div className="text-[11px] font-mono uppercase text-amber-400">24/7 Codespaces Trap</div>
+              <div className="text-2xl font-mono font-bold text-rose-400 mt-0.5">$301.80/mo</div>
               <div className="text-[11px] text-slate-400 mt-0.5">
-                RTX 4090 24GB (RunPod/Vast) or $3.95/hr Per-Sec Serverless H100
+                4-Core Codespace 24/7 ($262.80) + Copilot Pro+ ($39) = 17x VM Markup
               </div>
             </div>
           </div>
@@ -151,32 +152,23 @@ export default function HomePage() {
         <article className="prose prose-invert max-w-none">
           <section id="thesis" className="scroll-mt-20">
             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-indigo-400 font-bold mb-2">
-              <BookOpen className="h-4 w-4" /> PART I • GOING WIDE: THE GREAT SANDBOX BIFURCATION
+              <BookOpen className="h-4 w-4" /> PART I • GOING WIDE: BIG PLAYERS, MICROVMS &amp; ZERO FREE-TIER LOTTERY
             </div>
             <h2 className="text-3xl font-bold text-white tracking-tight">
-              1. Why Every AI Agent Needs Its Own Sandboxed Computer
+              1. Two Rules of Production Agent Infrastructure: Never Rely on Free Tiers, and Never Pay Per-Token Retail for Daily Loops
             </h2>
 
             <p className="mt-4 text-slate-300 leading-relaxed text-base font-serif">
-              Between 2023 and 2025, the prevailing pattern for building AI applications was stateless request-response: your backend sent a prompt to an LLM API, parsed a JSON tool call, and ran a lightweight webhook. In 2026, that paradigm collapsed. Whether you are deploying{" "}
+              If you read surface-level tutorials on running{" "}
               <a
-                href="https://openai.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-400 underline hover:text-indigo-300"
-              >
-                OpenAI Dots
-              </a>{" "}
-              (persistent AI teammates equipped with their own cloud computer and browser), self-hosting{" "}
-              <a
-                href="https://openclaw-ai.com"
+                href="https://openclaw.ai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-emerald-400 underline hover:text-emerald-300"
               >
                 OpenClaw
-              </a>
-              , or running parallel coding swarms with{" "}
+              </a>{" "}
+              or{" "}
               <a
                 href="https://claude.com"
                 target="_blank"
@@ -184,229 +176,250 @@ export default function HomePage() {
                 className="text-indigo-400 underline hover:text-indigo-300"
               >
                 Claude Code
-              </a>
-              , modern agency requires <strong>a real operating system</strong>: a bash shell, a persistent filesystem, git state, headless Chromium, and network isolation.
+              </a>{" "}
+              in the cloud, they almost always recommend two things that fail in real engineering workflows: spinning up an Oracle Cloud (OCI) Always-Free ARM instance, and pasting in a metered OpenRouter or raw console API key.
             </p>
 
-            <blockquote className="my-6 border-l-4 border-indigo-500 bg-slate-900/80 p-5 rounded-r-xl text-slate-200 italic font-serif">
-              &ldquo;Our first mistake in Revision 1 was assuming all cloud sandboxes compete on the same 24/7 vCPU-hour price line. When you convert E2B ($0.17/hr) or Daytona ($0.165/hr) into a 730-hour monthly figure (~$122/month) and compare it to a $6.20/month Netcup or $7.50/month Hetzner VM, serverless sandboxes look 18x overpriced. That comparison is mathematically correct for a single continuous daemon—and catastrophically wrong for burst parallel execution.&rdquo;
+            <blockquote className="my-6 border-l-4 border-amber-500 bg-slate-900/80 p-5 rounded-r-xl text-slate-200 italic font-serif">
+              &ldquo;When we challenged our own initial assumptions, two truths stood out immediately: First, free tiers are a mirage—OCI Always-Free throws &lsquo;Out of Host Capacity&rsquo; errors for weeks and reclaims idle VMs without warning, while sandbox hobby tiers kill your sessions after 15 to 60 minutes. Second, real developers do not attach an uncapped per-token OpenRouter meter to an autonomous 24/7 agent. They log into their compute using heavily subsidized, flat-rate monthly LLM subscriptions from major American and Chinese AI labs.&rdquo;
             </blockquote>
 
             <p className="text-slate-300 leading-relaxed text-base font-serif">
-              When we challenged that assumption in <strong>Revision 2</strong>, we uncovered the{" "}
-              <strong>Duty-Cycle &amp; Concurrency Crossover Law</strong>. Suppose your evaluation harness or multi-agent coding workflow forks a repository into <strong>35 parallel branches</strong>, builds the project, runs Playwright tests for 45 seconds per branch, and tears down. On{" "}
-              <a
-                href="https://modal.com/pricing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-400 underline"
-              >
-                Modal Sandboxes
-              </a>{" "}
-              (~$0.079/hr per 2 vCPU / 4 GiB container, billed strictly per second with $30/mo free starter credits) or{" "}
-              <a
-                href="https://daytona.io/pricing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-400 underline"
-              >
-                Daytona
-              </a>{" "}
-              (&lt;90ms cold start), 35 concurrent sandboxes running for 45 seconds costs{" "}
-              <strong>$0.034 per run</strong> (or $0.00 net on Modal&apos;s free tier). Attempting to run 35 simultaneous Rust or Next.js builds inside a single $6 VPS with 4 GB RAM triggers immediate Linux OOM-killer crashes.
+              Once you insist on <strong>100% paid, SLA-backed commercial compute</strong> and{" "}
+              <strong>predictable flat-rate monthly LLM logins</strong>, the 2026 cloud sandbox market splits into a fascinating architectural showdown between <strong>Bundled Big-Player Agent Workspaces</strong> and <strong>Modular Non-Major Cloud VMs + Subsidized CLI Logins</strong>:
             </p>
+
+            <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
+              <div className="rounded-xl bg-slate-900/90 border border-indigo-500/30 p-5">
+                <div className="text-xs font-mono font-bold uppercase text-indigo-300">
+                  Camp A • Bundled Big-Player Agent Workspaces
+                </div>
+                <ul className="mt-3 space-y-2 text-xs text-slate-300">
+                  <li>
+                    • <strong>Replit (Core $25/mo • Pro $100/mo):</strong> 4 vCPU / 4 GB dev container + Replit Agent + built-in Postgres &amp; mobile app ($20/$100 monthly credit pool).
+                  </li>
+                  <li>
+                    • <strong>Anthropic Claude Cloud (Pro $20 • Max $100 • Ultra $200):</strong> First-party `claude --cloud` repo containers + 1x, 5x, or 10x Claude 4.6 Sonnet/Opus coding quota.
+                  </li>
+                  <li>
+                    • <strong>OpenAI Dots &amp; Codex (Plus $20 • Pro $100–$500/mo):</strong> Dedicated always-on Cloud Dot VM + browser on Pro ($100+), plus official OAuth CLI login.
+                  </li>
+                  <li>
+                    • <strong>Google AI Pro ($19.99/mo) &amp; Ultra ($99.99/mo):</strong> Includes <strong>Google Jules</strong> (100 to 300 async GitHub repo VM tasks/day across <strong>15 to 60 concurrent Google Cloud VMs</strong>) + 1,500 daily Gemini CLI requests!
+                  </li>
+                  <li>
+                    • <strong>xAI SuperGrok ($30–$200/mo), Cursor ($20/$60/$200), Devin/Windsurf ($20/$200) &amp; GitHub Codespaces ($0.18–$0.72/hr + Copilot $10/$39/$100).</strong>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="rounded-xl bg-slate-900/90 border border-emerald-500/30 p-5">
+                <div className="text-xs font-mono font-bold uppercase text-emerald-300">
+                  Camp B • Paid Non-Major VM + Dual US/CN Subsidized Logins
+                </div>
+                <ul className="mt-3 space-y-2 text-xs text-slate-300">
+                  <li>
+                    • <strong>Paid Sovereign Compute ($5.28 to $15.50/mo):</strong> <strong>Netcup VPS 1000 G11</strong> ($6.20/mo for 4 vCPU, 8 GB DDR5, <strong>256 GB NVMe</strong>), <strong>Netcup RS 2000</strong> ($15.50/mo for 8 dedicated cores, 16 GB DDR5, 512 GB NVMe), <strong>Hetzner CAX21/CPX31</strong> ($7.50–$14.50/mo), or <strong>Contabo VPS 6</strong> ($10.50/mo for 16 GB RAM).
+                  </li>
+                  <li>
+                    • <strong>Log In With Your Paid US Subscription:</strong> Run `claude auth login` (Claude Pro/Max), `openclaw models auth login --provider openai` (ChatGPT Plus/Pro OAuth), `gemini auth login` (Google AI Pro), or inject your SuperGrok token.
+                  </li>
+                  <li>
+                    • <strong>Pair With a Flat-Rate Chinese Coding Plan ($18–$19/mo):</strong> Add <strong>Z.ai GLM-5.3 Coding Plan ($18/mo)</strong>, <strong>Alibaba Qwen Coder ($19/mo)</strong>, <strong>Moonshot Kimi Code ($19/mo)</strong>, or <strong>MiniMax M-Plan ($19/mo)</strong> inside the exact same CLI so your agent never stops when a 5-hour US quota window fills up!
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
         </article>
 
-        {/* Figure 1: Duty Cycle Crossover Chart */}
+        {/* Figure 1: Bundled IDEs vs Modular VM + Subsidized Logins */}
         <DutyCycleCrossoverChart />
 
-        {/* Widget 1: Interactive Workload & TCO Simulator */}
+        {/* Widget 1: Interactive Paid Compute + Subsidized LLM Matcher */}
         <WorkloadSimulatorWidget />
 
-        {/* Section 2: Deep Dive into the 4 Core Workloads */}
+        {/* Section 2: Deep Dive into the 5 Core Workloads */}
         <section id="workload-deep-dive" className="mt-16 scroll-mt-20">
           <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold mb-2">
-            <Layers className="h-4 w-4" /> PART II • GOING DEEP: THE 4 WORKLOAD ARCHETYPES
+            <Layers className="h-4 w-4" /> PART II • GOING DEEP: BIG PLAYERS vs. SPECIALISTS ACROSS 5 WORKLOADS
           </div>
           <h2 className="text-3xl font-bold text-white tracking-tight">
-            2. Remote Browser vs. OpenClaw vs. Burst Code Sandbox vs. AI Factory
+            2. Where Replit, Anthropic, Grok, Google Jules, MicroVMs &amp; Non-Major Cloud VMs Actually Win
           </h2>
           <p className="mt-3 text-slate-300 font-serif text-base leading-relaxed">
-            No single cloud provider wins across all four dimensions of modern AI infrastructure. Below is our engineering teardown of the hardware bottlenecks, hidden billing traps, and price-to-power champions for each workload.
+            When you look past marketing landing pages and examine actual vCPU allocations, RAM ceilings, credit cannibalization, and 5-hour rolling windows, each workload has a distinct price-to-power sweet spot:
           </p>
 
-          {/* 4 Workload Deep-Dive Cards */}
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Workload A: Remote Browsers */}
+            {/* Card 1: Replit & Codespaces vs Modular VM */}
+            <div className="rounded-2xl border border-purple-500/30 bg-slate-900/80 p-6 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-3">
+                  <span className="text-[11px] font-mono font-bold uppercase px-2.5 py-1 rounded-full bg-purple-500/15 text-purple-300 border border-purple-500/30">
+                    WORKLOAD 1 • ALL-IN-ONE CLOUD IDEs vs. SOVEREIGN VPS
+                  </span>
+                  <Terminal className="h-5 w-5 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white">
+                  Replit Core/Pro &amp; GitHub Codespaces vs. Netcup / Hetzner + Dokploy
+                </h3>
+                <p className="mt-2.5 text-xs text-slate-300 leading-relaxed">
+                  <strong>Replit Core ($25/mo)</strong> and <strong>Pro ($100/mo)</strong> shine when you want zero Linux administration: you open the Replit mobile or web app, prompt Replit Agent, and get an instant preview URL with managed Postgres.
+                </p>
+
+                <div className="mt-4 space-y-2 text-xs">
+                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
+                    <div className="font-bold text-amber-300">
+                      The Replit &amp; Codespaces Credit Trap on 24/7 Workloads:
+                    </div>
+                    <p className="text-slate-400 mt-0.5">
+                      Replit Core&apos;s $20 monthly credit pool is drawn down simultaneously by effort-based Agent checkpoints, Reserved Always-On VMs ($20–$50/mo for 1–2 vCPU), and active Postgres hours ($0.16/hr = $116/mo if active 24/7!). Similarly, running a 4-core / 16 GB <strong>GitHub Codespace</strong> ($0.36/hr) 24/7 costs <strong>$262.80/month</strong> in raw VM time alone.
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
+                    <div className="font-bold text-emerald-300">
+                      The Modular Alternative ($6.20–$15.50/mo):
+                    </div>
+                    <p className="text-slate-400 mt-0.5">
+                      A <strong>Netcup RS 2000 G11 ($15.50/mo)</strong> gives you <strong>8 dedicated AMD EPYC cores, 16 GB DDR5 RAM, and 512 GB NVMe</strong> 24/7/365—17x cheaper than a 24/7 Codespace.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-4 pt-3 border-t border-slate-800 text-xs">
+                <span className="text-emerald-400 font-mono font-bold">
+                  Verdict: Replit Core ($25) for instant 0-ops prototyping; Netcup/Hetzner ($6.20–$15.50) for 24/7 servers.
+                </span>
+              </div>
+            </div>
+
+            {/* Card 2: Async Repo Swarms (Jules, Claude Cloud, Cursor, Devin) */}
+            <div className="rounded-2xl border border-cyan-500/30 bg-slate-900/80 p-6 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-3">
+                  <span className="text-[11px] font-mono font-bold uppercase px-2.5 py-1 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
+                    WORKLOAD 2 • ASYNC GITHUB REPO SWARMS
+                  </span>
+                  <FileCode className="h-5 w-5 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white">
+                  Google Jules ($19.99) vs. Anthropic Claude Cloud ($100) vs. Cursor Ultra &amp; Devin Max ($200)
+                </h3>
+                <p className="mt-2.5 text-xs text-slate-300 leading-relaxed">
+                  What if you want 10 to 60 cloud sandboxes to clone your GitHub repo in parallel, fix issues, run tests, and open PRs while you commute?
+                </p>
+
+                <div className="mt-4 space-y-2 text-xs">
+                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
+                    <div className="font-bold text-cyan-300">
+                      1. Google AI Pro ($19.99/mo) &amp; Ultra ($99.99/mo) — The Hidden Giant
+                    </div>
+                    <p className="text-slate-400 mt-0.5">
+                      For $19.99/mo, Google bundles <strong>Jules</strong> with <strong>100 async coding VM tasks/day (15 concurrent Google-hosted VMs!)</strong> plus <strong>1,500 Gemini CLI requests/day</strong> on your own server and 5 TB Drive storage. Ultra ($99.99) scales to 300 tasks/day and 60 concurrent VMs.
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
+                    <div className="font-bold text-indigo-300">
+                      2. Claude Max ($100) / Ultra ($200), Cursor Ultra ($200) &amp; Devin Max ($200)
+                    </div>
+                    <p className="text-slate-400 mt-0.5">
+                      <strong>Anthropic Claude Max ($100)</strong> &amp; <strong>Ultra ($200)</strong> deliver the highest single-agent code reasoning quality (`claude --cloud` + local CLI). <strong>Cursor Ultra ($200)</strong> gives 50x multi-model pool + priority Background Agent VMs, while <strong>Devin/Windsurf Max ($200)</strong> gives a full graphical browser+IDE workstation per agent.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-4 pt-3 border-t border-slate-800 text-xs">
+                <span className="text-emerald-400 font-mono font-bold">
+                  Verdict: Google AI Pro ($19.99) for 15x async VM fan-out + Claude Max ($100) for deep architecture.
+                </span>
+              </div>
+            </div>
+
+            {/* Card 3: Stealth Remote Browser Fleets */}
             <div className="rounded-2xl border border-pink-500/30 bg-slate-900/80 p-6 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <span className="text-[11px] font-mono font-bold uppercase px-2.5 py-1 rounded-full bg-pink-500/15 text-pink-300 border border-pink-500/30">
-                    WORKLOAD A • REMOTE BROWSER FLEETS
+                    WORKLOAD 3 • STEALTH REMOTE BROWSER FLEETS
                   </span>
                   <Globe className="h-5 w-5 text-pink-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white">
-                  Why Headless Chrome on a $5 VPS Fails — And When to Use Steel.dev vs. Browserbase
+                  Steel.dev &amp; Browserbase vs. Self-Hosted Steel on Contabo 16GB ($10.50/mo)
                 </h3>
                 <p className="mt-2.5 text-xs text-slate-300 leading-relaxed">
-                  In Revision 2, we tested running raw Playwright inside a cheap VPS. Two walls hit immediately:
-                  <strong> (1) ASN Reputation Blocking</strong>—100% of Hetzner, Contabo, and AWS IP blocks are flagged by Cloudflare and DataDome; and <strong>(2) Chromium RAM Spikes</strong>—each modern SPA tab consumes 400 MB to 1.2 GB of RAM.
+                  Every modern SPA tab in headless Chromium eats 400 MB–1.2 GB of RAM, and 100% of raw VPS datacenter ASNs are blocked by Cloudflare Turnstile and DataDome.
                 </p>
 
                 <div className="mt-4 space-y-2 text-xs">
                   <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
                     <div className="font-bold text-pink-300">
-                      1. Steel.dev ($0.08–$0.10/hr + $30 Free Credit or Self-Hosted OSS)
+                      Managed Stealth: Browserbase ($20 / $99) &amp; Steel Cloud ($0.08–$0.10/hr)
                     </div>
                     <p className="text-slate-400 mt-0.5">
-                      Open-source MIT/Apache stack. Prototype on Steel Cloud at $0.10/hr (Scale tier drops to $0.08/hr with 100 concurrent browsers), or self-host the official <code className="text-slate-200">steel-browser</code> Docker image on an 8 GB Contabo VPS ($5.28/mo) paired with a residential proxy ($6/GB). Features an embeddable live view for mobile human takeover.
-                    </p>
-                  </div>
-                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
-                    <div className="font-bold text-pink-300">
-                      2. Browserbase ($20/mo Dev for 100 hrs • $99/mo Startup for 500 hrs)
-                    </div>
-                    <p className="text-slate-400 mt-0.5">
-                      Purpose-built for Stagehand and MCP web agents. Best-in-class DOM session replay timeline, automatic stealth fingerprint rotation, and ~$0.10–$0.12/hr effective rates.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-4 pt-3 border-t border-slate-800 text-xs flex items-center justify-between">
-                <span className="text-emerald-400 font-mono font-bold">
-                  Sweet Spot: Steel Cloud (&lt;150 hrs) / Steel OSS on Contabo 8GB (&gt;300 hrs)
-                </span>
-              </div>
-            </div>
-
-            {/* Workload B: OpenClaw & Persistent Agent Computers */}
-            <div className="rounded-2xl border border-emerald-500/30 bg-slate-900/80 p-6 flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-[11px] font-mono font-bold uppercase px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                    WORKLOAD B • 24/7 PERSONAL AGENTS (OPENCLAW vs. DOTS)
-                  </span>
-                  <Terminal className="h-5 w-5 text-emerald-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white">
-                  Sovereign OpenClaw ($4–$12/mo) vs. Managed OpenAI Dots ($100–$500/mo)
-                </h3>
-                <p className="mt-2.5 text-xs text-slate-300 leading-relaxed">
-                  <strong>OpenAI Dots</strong> give enterprise workers a zero-ops persistent cloud VM + browser powered by GPT-6 Astra/Terra with 4,000+ pre-wired SaaS OAuth integrations (ChatGPT Pro $100/$200/$500/mo; Enterprise Standard Dot $50/mo). By contrast, <strong>OpenClaw</strong> gives developers full root SSH sovereignty, local Docker daemons, and custom BYOK model routing.
-                </p>
-
-                <div className="mt-4 space-y-2 text-xs">
-                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
-                    <div className="font-bold text-emerald-300">
-                      1. Hetzner CAX21 ARM ($7.50/mo) &amp; Netcup VPS 1000 G11 ($6.20/mo)
-                    </div>
-                    <p className="text-slate-400 mt-0.5">
-                      Both deliver <strong>4 vCPUs and 8 GB RAM</strong> with &lt;0.5% CPU steal. Netcup includes a massive <strong>256 GB NVMe</strong> disk (3.2x Hetzner&apos;s 80 GB), while Hetzner offers hourly billing and instant ARM64 provisioning.
+                      <strong>Browserbase</strong> ($20/mo for 100 hrs, $99/mo for 500 hrs) and <strong>Steel.dev Paid Cloud</strong> ($0.08–$0.10/hr) handle residential proxy rotation, anti-bot fingerprinting, and live DOM session replay automatically.
                     </p>
                   </div>
                   <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
                     <div className="font-bold text-emerald-300">
-                      2. Oracle OCI Free Tier ($0/mo for 4 ARM Cores + 24 GB RAM) &amp; Fly Sprites
+                      High-Volume Hybrid: Steel OSS Docker on Contabo VPS 6 (16 GB RAM, $10.50/mo)
                     </div>
                     <p className="text-slate-400 mt-0.5">
-                      OCI&apos;s `VM.Standard.A1.Flex` gives 24 GB RAM for $0 forever. Prefer managed microVMs without sysadmin maintenance? <strong>Fly.io Sprites</strong> bill only on <em>active CPU</em> ($0.0385/CPU-hr) plus hot/cold checkpointing.
+                      Run Steel&apos;s open-source Docker container on a <strong>16 GB RAM Contabo VPS ($10.50/mo)</strong> and stream port `:5173` over Tailscale Serve to your phone so you can manually tap through 2FA logins!
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-slate-800 text-xs flex items-center justify-between">
+              <div className="mt-4 pt-3 border-t border-slate-800 text-xs">
                 <span className="text-emerald-400 font-mono font-bold">
-                  Sweet Spot: 4 vCPU / 8 GB RAM NVMe VPS ($6.20–$7.50/mo) + DeepSeek V4.1
+                  Verdict: Browserbase/Steel Cloud (&lt;200 hrs/mo); Contabo 16GB + Steel OSS (&gt;250 hrs/mo).
                 </span>
               </div>
             </div>
 
-            {/* Workload C: Burst Code Execution Sandboxes */}
-            <div className="rounded-2xl border border-indigo-500/30 bg-slate-900/80 p-6 flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-[11px] font-mono font-bold uppercase px-2.5 py-1 rounded-full bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
-                    WORKLOAD C • BURST CODE &amp; EVAL SANDBOXES
-                  </span>
-                  <FileCode className="h-5 w-5 text-indigo-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white">
-                  Sub-150ms Cold Starts &amp; Memory Snapshots: Modal vs. E2B vs. Daytona vs. Cloudflare
-                </h3>
-                <p className="mt-2.5 text-xs text-slate-300 leading-relaxed">
-                  When an AI coding agent or multi-tenant SaaS executes untrusted LLM code, you need hardware-isolated teardown, sub-second spin-up, and massive concurrency fan-out.
-                </p>
-
-                <div className="mt-4 space-y-2 text-xs">
-                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
-                    <div className="font-bold text-indigo-300">
-                      1. Modal Sandboxes (~$0.079/hr • $0 Base + $30/mo Free Credits)
-                    </div>
-                    <p className="text-slate-400 mt-0.5">
-                      gVisor-isolated containers scaling to 5,000+ concurrent nodes. Because Starter includes $30/mo in free credits every month, up to ~380 hours of 2-vCPU / 4-GiB sandbox execution costs literally <strong>$0.00/month</strong>.
-                    </p>
-                  </div>
-                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
-                    <div className="font-bold text-indigo-300">
-                      2. Daytona (&lt;90ms Boot, $0 Base) &amp; E2B (~150ms Firecracker Snapshots)
-                    </div>
-                    <p className="text-slate-400 mt-0.5">
-                      Daytona charges $0.165/hr with no monthly subscription gate ($200 trial credit). E2B ($0.17/hr) pioneers Firecracker memory snapshotting so agents can branch a running VM state in 150ms. <strong>Cloudflare Sandboxes</strong> ($5 base) bill strictly on active CPU cycles.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-4 pt-3 border-t border-slate-800 text-xs flex items-center justify-between">
-                <span className="text-emerald-400 font-mono font-bold">
-                  Sweet Spot: Modal Starter ($0 net up to 380 hrs) + Daytona/E2B for Snapshots
-                </span>
-              </div>
-            </div>
-
-            {/* Workload D: GPU AI Factories */}
+            {/* Card 4: Burst MicroVMs & Paid GPU AI Factories */}
             <div className="rounded-2xl border border-amber-500/30 bg-slate-900/80 p-6 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <span className="text-[11px] font-mono font-bold uppercase px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                    WORKLOAD D • ELASTIC GPU AI FACTORIES
+                    WORKLOAD 4 &amp; 5 • BURST MICROVMS &amp; GPU AI FACTORIES
                   </span>
                   <Cpu className="h-5 w-5 text-amber-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white">
-                  Serverless Per-Second H100s vs. P2P Spot Marketplaces (Modal, RunPod, Vast, Lambda)
+                  Modal, E2B, Daytona &amp; Cloudflare Sandboxes + RunPod / Vast / Lambda GPUs
                 </h3>
                 <p className="mt-2.5 text-xs text-slate-300 leading-relaxed">
-                  An &ldquo;AI Factory&rdquo; turns raw tokens, audio, or video checkpoints into high-throughput artifacts. Renting a dedicated GPU 24/7 when your pipeline is event-driven burns 80% of your budget on idle silicon.
+                  When your agent needs to spawn 50 isolated code sandboxes for 30 seconds or burst onto an 80 GB H100 GPU without paying 24/7 idle leases:
                 </p>
 
                 <div className="mt-4 space-y-2 text-xs">
                   <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
-                    <div className="font-bold text-amber-300">
-                      1. Spiky Inference &amp; Agent Media: Modal Serverless GPU ($3.95/hr H100)
+                    <div className="font-bold text-indigo-300">
+                      Burst Code MicroVMs: Modal ($0.079/hr), Daytona (&lt;90ms), E2B ($0.17/hr), Fly Sprites
                     </div>
                     <p className="text-slate-400 mt-0.5">
-                      Spins up an H100 (or $1.95/hr L40S, $7.10/hr B300) in &lt;2 seconds, runs a 30-second batch job for <strong>$0.033</strong>, and scales to zero.
+                      <strong>Modal</strong> offers the lowest commercial per-second rate ($0.079/hr for 2 vCPU / 4 GiB). <strong>Daytona</strong> boots in &lt;90ms, <strong>E2B Pro</strong> ($150/mo + $0.17/hr) branches Firecracker memory snapshots in 150ms, and <strong>Fly.io Sprites / Cloudflare Sandboxes</strong> bill strictly on <em>active CPU cycles</em>.
                     </p>
                   </div>
                   <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
                     <div className="font-bold text-amber-300">
-                      2. Sustained Batch &amp; Training: Vast.ai ($0.67/hr A100) &amp; RunPod ($0.34/hr 4090)
+                      Paid GPU Factories: Modal H100 ($3.95/hr per-sec), RunPod 4090 ($0.34/hr), Vast A100 ($0.67/hr)
                     </div>
                     <p className="text-slate-400 mt-0.5">
-                      For multi-hour LoRA or batch vLLM runs, RunPod Community RTX 4090 ($0.34/hr) and Vast.ai A100 80GB (~$0.67/hr) crush hyperscaler pricing by 75%. For multi-node training with multi-TB weight transfers, <strong>Lambda Labs</strong> ($4.29/hr H100) charges <strong>zero egress fees</strong>.
+                      Use <strong>Modal Serverless GPU</strong> for spiky sub-minute H100/B300 inference, <strong>RunPod / Vast.ai</strong> for cheap interactive RTX 4090 / A100 pods, and <strong>Lambda Labs</strong> ($4.29/hr H100) for zero-egress multi-node training.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-slate-800 text-xs flex items-center justify-between">
+              <div className="mt-4 pt-3 border-t border-slate-800 text-xs">
                 <span className="text-emerald-400 font-mono font-bold">
-                  Sweet Spot: Modal Per-Sec H100 (Burst) / RunPod 4090 &amp; Vast A100 (Batch)
+                  Verdict: Modal ($0.079/hr CPU / $3.95/hr H100 per-sec) + Vast/RunPod ($0.34–$0.67/hr batch GPU).
                 </span>
               </div>
             </div>
@@ -416,81 +429,77 @@ export default function HomePage() {
         {/* Figure 2: Price-to-Power Scatter Matrix */}
         <PriceToPowerScatterChart />
 
-        {/* Section 3: The DeepSeek + Non-Major Cloud VM Arbitrage */}
-        <section id="deepseek-arbitrage" className="mt-16 scroll-mt-20">
+        {/* Section 3: The US + Chinese Subsidized LLM Subscription Login Strategy */}
+        <section id="subsidized-logins" className="mt-16 scroll-mt-20">
           <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold mb-2">
-            <Sparkles className="h-4 w-4" /> PART III • THE ARBITRAGE STACK (REVISION 3 BREAKTHROUGH)
+            <KeyRound className="h-4 w-4" /> PART III • THE DUAL-FLAG SUBSIDIZED LOGIN STRATEGY (REVISION 3)
           </div>
           <h2 className="text-3xl font-bold text-white tracking-tight">
-            3. The &ldquo;Heartbeat Token Trap&rdquo; — And Why DeepSeek V4.1 + a €6 European VPS Changes Everything
+            3. Why Smart Engineers Pair One American Subscription ($20) + One Chinese Coding Plan ($18–$19) on Their Cloud VM
           </h2>
 
           <div className="mt-4 space-y-4 text-slate-300 font-serif text-base leading-relaxed">
             <p>
-              In <strong>Revision 3</strong>, we challenged a widespread community blind spot: developers spend hours debating whether to buy a $5.28 Contabo VPS, a $6.20 Netcup VPS, or a $7.50 Hetzner ARM VM for their <strong>OpenClaw</strong> agent—while completely ignoring the <strong>Heartbeat Token Drain</strong>.
+              In <strong>Revision 3</strong>, we analyzed how developers actually authenticate{" "}
+              <strong>Claude Code</strong>, <strong>OpenClaw</strong>, <strong>Codex CLI</strong>,{" "}
+              <strong>Gemini CLI</strong>, and <strong>OpenCode</strong> inside a dedicated cloud VM. Nobody wants a surprise $350 OpenRouter invoice at the end of the month. Instead, you log into your VM with a <strong>flat-rate, subsidized monthly subscription</strong>.
             </p>
             <p>
-              Here is the math that catches 90% of self-hosters off guard: an autonomous OpenClaw agent wakes up every 15 minutes (4 times an hour, 2,880 times a month) to inspect your inbox, GitHub PR status, calendar, and system monitors. Each heartbeat loads a ~25,000-token context window (system prompt, MCP tool definitions, and workspace memory). That equals{" "}
-              <strong>72 Million Input Tokens per month just for your agent to stay conscious</strong>. On an uncached frontier API at $2.50–$3.00/1M input tokens, your idle heartbeat bill exceeds{" "}
-              <strong className="text-rose-400">$215/month</strong>!
+              But there is a catch with relying on a single $20/month American subscription (like{" "}
+              <strong>Claude Pro $20</strong> or <strong>ChatGPT Plus $20</strong>): to protect their unit economics, Western labs enforce <strong>rolling 5-hour usage windows and weekly caps</strong>. If your autonomous agent enters a deep multi-file refactor or runs 15-minute background heartbeats, a single $20 plan hits its 5-hour ceiling in roughly <strong>90 to 110 minutes</strong>—leaving your cloud VM idle for the next 3+ hours unless you pay $100–$200/month for Max/Ultra.
             </p>
             <p>
-              When you pair a <strong>Non-Major Cloud VM</strong> (Hetzner CAX21 ARM, Netcup VPS 1000 G11, or Oracle OCI Free Tier) with{" "}
-              <a
-                href="https://api-docs.deepseek.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-emerald-400 underline"
-              >
-                DeepSeek&apos;s V4.1-Flash &amp; V4-Pro API
-              </a>
-              , three compounding levers collapse that $215 token bill down to <strong>$4.12/month</strong>:
+              Meanwhile, major Chinese AI labs—<strong>Z.ai (GLM-5.3)</strong>,{" "}
+              <strong>Alibaba Cloud (Qwen3-Coder)</strong>, <strong>Moonshot AI (Kimi K2.5)</strong>, and{" "}
+              <strong>MiniMax (M2.5-Highspeed)</strong>—have launched explicit{" "}
+              <strong>flat-rate monthly &ldquo;Coding Plan&rdquo; subscriptions ($18–$19/mo Lite/Standard, $39–$80/mo Pro)</strong> designed specifically to plug straight into <strong>Claude Code, OpenClaw, Cline, and Cursor</strong>! Even better, plans like Z.ai&apos;s GLM Coding Plan apply a{" "}
+              <strong>0.5x credit deduction multiplier during off-peak hours outside Beijing business peak</strong>, effectively giving US and European daytime developers <strong>double the subscription quota</strong>.
             </p>
           </div>
 
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="rounded-xl bg-slate-900 border border-slate-800 p-5">
+            <div className="rounded-xl bg-slate-900 border border-indigo-500/30 p-5">
+              <div className="text-xs font-mono font-bold text-indigo-400 uppercase">
+                1. American OAuth Logins ($19.99–$100/mo)
+              </div>
+              <h4 className="text-base font-bold text-white mt-1">
+                Claude, ChatGPT, Google AI Pro &amp; SuperGrok
+              </h4>
+              <p className="text-xs text-slate-300 mt-2 leading-relaxed">
+                Authenticate <code className="text-indigo-300">claude auth login</code> (Claude Pro/Max), <code className="text-indigo-300">openclaw models auth login --provider openai</code> (official ChatGPT Plus/Pro OAuth), <code className="text-indigo-300">gemini auth login</code> (1,500 req/day + 15 concurrent Google Jules VMs!), or inject your <strong>xAI SuperGrok</strong> Colossus token.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-slate-900 border border-emerald-500/30 p-5">
               <div className="text-xs font-mono font-bold text-emerald-400 uppercase">
-                Lever 1 • 50x Prefix Cache Drop
+                2. Chinese Flat-Rate Coding Plans ($18–$19/mo)
               </div>
               <h4 className="text-base font-bold text-white mt-1">
-                $0.003 / 1M Tokens on Cache Hit
+                Z.ai GLM-5.3, Qwen Coder, Kimi K2.5 &amp; MiniMax M2.5
               </h4>
               <p className="text-xs text-slate-300 mt-2 leading-relaxed">
-                Because OpenClaw&apos;s system instructions, MCP tool schemas, and memory prefix stay static across heartbeats, 85%–90% of input tokens hit DeepSeek&apos;s automatic disk cache—dropping <code className="text-emerald-300">deepseek-flash</code> off-peak input from $0.15/1M down to <strong>$0.003/1M</strong>.
+                Unlike consumer chat apps that block CLI harnesses, Chinese Coding Plans give you a dedicated flat-rate subscription token engineered for <strong>Claude Code &amp; OpenClaw</strong>—handling high-frequency tool loops, 2M-token repo ingestion (Kimi K2.5), and high-TPS test fixing (MiniMax M2.5).
               </p>
             </div>
 
-            <div className="rounded-xl bg-slate-900 border border-slate-800 p-5">
-              <div className="text-xs font-mono font-bold text-cyan-400 uppercase">
-                Lever 2 • 90/10 Dual-Model Tiering
-              </div>
-              <h4 className="text-base font-bold text-white mt-1">
-                V4.1-Flash Triage → V4-Pro Code
-              </h4>
-              <p className="text-xs text-slate-300 mt-2 leading-relaxed">
-                Route 90% of background heartbeats, log monitoring, and multimodal screenshot triage to <code className="text-cyan-300">deepseek-flash</code> (2,500 concurrency limit), and escalate only complex multi-file coding to <code className="text-indigo-300">deepseek-v4-pro</code> ($0.022/1M cached hit).
-              </p>
-            </div>
-
-            <div className="rounded-xl bg-slate-900 border border-slate-800 p-5">
+            <div className="rounded-xl bg-slate-900 border border-amber-500/30 p-5">
               <div className="text-xs font-mono font-bold text-amber-400 uppercase">
-                Lever 3 • UTC Off-Peak Cron Arbitrage
+                3. The $44.20/mo Unstoppable Combo
               </div>
               <h4 className="text-base font-bold text-white mt-1">
-                50% Off Outside 7 Peak UTC Hours
+                Netcup 8GB VM ($6.20) + US ($20) + CN ($18)
               </h4>
               <p className="text-xs text-slate-300 mt-2 leading-relaxed">
-                DeepSeek charges 2x during Peak UTC (<strong>01:00–04:00 &amp; 06:00–10:00 UTC Mon–Fri</strong>) and 1x during the other 17 hours/day + all weekend. Shifting nightly repo indexing and scraping cron jobs to 11:00–00:59 UTC halves token spend immediately.
+                Use your American login (Claude/GPT/Gemini/Grok) for top-level architectural planning and complex diffs, and auto-route background heartbeats &amp; 5-hour overflow to your Chinese Coding Plan. <strong>100% flat-rate, zero lockouts, zero per-token overages.</strong>
               </p>
             </div>
           </div>
         </section>
 
-        {/* Widget 2: DeepSeek + Non-Major Cloud VM Arbitrage Calculator */}
+        {/* Widget 2: US + Chinese Subsidized Subscription Blender */}
         <DeepSeekArbitrageWidget />
 
-        {/* Widget 3: Complete 19-Provider Filterable Atlas */}
+        {/* Widget 3: Complete 21-Provider Filterable Commercial Atlas */}
         <ProviderAtlasWidget />
 
         {/* Section 4: Managing Your Cloud Sandbox VM From Your Phone */}
@@ -499,18 +508,18 @@ export default function HomePage() {
             <Smartphone className="h-4 w-4" /> PART IV • THE POCKET CONTROL PLANE (REVISION 4 ARCHITECTURE)
           </div>
           <h2 className="text-3xl font-bold text-white tracking-tight">
-            4. How to Command Your Cloud Sandbox VM From Your Phone (Without Dropping Sessions in Tunnels)
+            4. How to Command Your Cloud VM &amp; Complete `localhost` OAuth Logins From Your Phone
           </h2>
 
           <div className="mt-4 space-y-4 text-slate-300 font-serif text-base leading-relaxed">
             <p>
-              In <strong>Revision 4</strong>, we challenged two assumptions about mobile VM management: first, that opening standard TCP SSH on Port 22 with <code className="text-indigo-300 text-sm font-mono">tmux</code> is good enough for cellular networks; and second, that controlling a cloud VM from a phone means typing long bash commands on a 6-inch glass screen.
+              In <strong>Revision 4</strong>, we solved the two biggest hurdles developers hit when trying to run a cloud VM from an iPhone or Android on cellular networks:
             </p>
             <p>
-              Anyone who has tried standard TCP SSH on a train knows what happens: as soon as your phone hands off from station Wi-Fi to 5G or hits a 3-second cellular dead zone, TCP head-of-line blocking freezes your terminal for 45 seconds. Worse, leaving Port 22 open to the public internet invites 10,000+ credential-stuffing bots per day.
+              <strong>Hurdle 1: How do you complete an OAuth login (`claude auth login` or `openclaw models auth login --provider openai`) on a remote headless VPS from your phone when the OAuth callback redirects to `http://localhost:1455`?</strong> When you tap the auth link inside mobile Termius or Blink Shell, mobile Safari opens `chatgpt.com` or `claude.ai`, authenticates via FaceID, and redirects to `http://localhost:1455/?code=...`. Simply <strong>copy that full `localhost` URL from mobile Safari&apos;s address bar and paste it back into your terminal prompt</strong> (or forward the port over Tailscale)—and your remote VM caches the OAuth session token! Even simpler, your companion Chinese Coding Plan key (`Z.ai GLM`, `Qwen Coder`, `Kimi Code`, `MiniMax M-Plan`) is a static token exported in `/root/.openclaw.env` that never expires every 10 days.
             </p>
             <p>
-              The solution is a <strong>4-Layer Pocket Control Plane</strong> that turns your iPhone or Android into an unbreakable remote steering wheel for your cloud sandbox:
+              <strong>Hurdle 2: Stopping cellular TCP disconnects.</strong> Instead of exposing TCP Port 22 to brute-force bots and suffering 60-second terminal freezes whenever your phone switches from Wi-Fi to 5G, lock down your firewall (<code className="text-indigo-300 text-sm font-mono">ufw default deny incoming</code>) and connect over <strong>Tailscale WireGuard + UDP Mosh + Tmux/Zellij</strong>.
             </p>
           </div>
 
@@ -527,31 +536,31 @@ export default function HomePage() {
         {/* Section 6: Primary Sources & Verification Bibliography */}
         <section id="sources" className="mt-16 rounded-2xl border border-slate-800 bg-slate-900/60 p-6 md:p-8">
           <h3 className="text-xl font-bold text-white tracking-tight">
-            Verified Primary Sources &amp; Rate-Card Documentation (2026)
+            Verified Primary Sources &amp; Commercial Rate-Card Documentation (2026)
           </h3>
           <p className="text-xs text-slate-400 mt-1">
-            All compute allocations, per-second microVM rates, browser-hour meters, and token caching figures in this atlas are cross-checked against official documentation:
+            All paid subscription tiers, vCPU/RAM allocations, 5-hour quota structures, and microVM rates are cross-checked against official documentation:
           </p>
           <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-xs">
             {[
-              { name: "OpenAI Dots & ChatGPT Enterprise Pricing", url: "https://openai.com", domain: "openai.com" },
-              { name: "E2B Firecracker MicroVM Pricing", url: "https://e2b.dev/pricing", domain: "e2b.dev" },
-              { name: "Modal Sandboxes & Serverless GPUs", url: "https://modal.com/pricing", domain: "modal.com" },
-              { name: "Daytona Sub-90ms AI Sandboxes", url: "https://daytona.io/pricing", domain: "daytona.io" },
-              { name: "Fly.io Sprites Active-CPU MicroVMs", url: "https://fly.io", domain: "fly.io" },
-              { name: "Cloudflare Sandboxes (@cloudflare/sandbox)", url: "https://developers.cloudflare.com", domain: "cloudflare.com" },
-              { name: "Browserbase Agent Web Infrastructure", url: "https://browserbase.com/pricing", domain: "browserbase.com" },
-              { name: "Steel.dev Open-Source Browser API", url: "https://steel.dev/pricing", domain: "steel.dev" },
-              { name: "Browserless.io Enterprise Playwright", url: "https://browserless.io/pricing", domain: "browserless.io" },
-              { name: "Hetzner Cloud CAX ARM & CPX EPYC", url: "https://www.hetzner.com/cloud", domain: "hetzner.com" },
-              { name: "Netcup VPS 1000 G11 NVMe Root Servers", url: "https://www.netcup.com", domain: "netcup.com" },
-              { name: "Contabo Cloud VPS High-RAM Tiers", url: "https://contabo.com", domain: "contabo.com" },
-              { name: "OVHcloud Unmetered VPS Fleet", url: "https://www.ovhcloud.com", domain: "ovhcloud.com" },
-              { name: "Oracle Cloud Always-Free 24GB ARM", url: "https://www.oracle.com/cloud/free/", domain: "oracle.com" },
-              { name: "DeepSeek V4.1 API & UTC Off-Peak Docs", url: "https://api-docs.deepseek.com", domain: "deepseek.com" },
-              { name: "Vast.ai Spot GPU Marketplace", url: "https://vast.ai/pricing", domain: "vast.ai" },
-              { name: "RunPod Community & Secure GPU Cloud", url: "https://www.runpod.io/pricing", domain: "runpod.io" },
-              { name: "Lambda Labs Zero-Egress GPU Clusters", url: "https://lambdalabs.com/service/gpu-cloud", domain: "lambdalabs.com" }
+              { name: "Replit Core, Pro & Reserved VM Pricing", url: "https://replit.com/pricing", domain: "replit.com" },
+              { name: "Anthropic Claude Pro, Max, Ultra & Claude Code", url: "https://claude.com/pricing", domain: "claude.com" },
+              { name: "OpenAI Dots & ChatGPT Plus/Pro OAuth", url: "https://openai.com", domain: "openai.com" },
+              { name: "Google Jules Async Cloud VMs & AI Pro/Ultra", url: "https://jules.google", domain: "jules.google" },
+              { name: "xAI SuperGrok, Grok Build & Colossus API", url: "https://x.ai", domain: "x.ai" },
+              { name: "Cursor Pro, Pro+, Ultra & Background Agents", url: "https://cursor.com/pricing", domain: "cursor.com" },
+              { name: "Devin & Windsurf (Cognition Pro / Max)", url: "https://windsurf.com/pricing", domain: "windsurf.com" },
+              { name: "GitHub Codespaces & Copilot Pro+ / Max", url: "https://github.com/features/copilot/plans", domain: "github.com" },
+              { name: "Z.ai GLM-5.3 Flat-Rate Coding Plans", url: "https://z.ai", domain: "z.ai" },
+              { name: "Alibaba Model Studio Qwen Coder Plans", url: "https://www.alibabacloud.com", domain: "alibabacloud.com" },
+              { name: "Moonshot Kimi K2.5 Code Memberships", url: "https://kimi.moonshot.cn", domain: "kimi.moonshot.cn" },
+              { name: "MiniMax M-Plan (M2.5-Highspeed) Coding Subs", url: "https://www.minimax.io", domain: "minimax.io" },
+              { name: "Netcup VPS 1000 G11 & RS 2000 G11 NVMe", url: "https://www.netcup.com", domain: "netcup.com" },
+              { name: "Hetzner Cloud CAX ARM & CPX AMD EPYC", url: "https://www.hetzner.com/cloud", domain: "hetzner.com" },
+              { name: "Contabo High-RAM Cloud VPS 4 / 6 / 8", url: "https://contabo.com", domain: "contabo.com" },
+              { name: "E2B, Modal, Daytona, Fly Sprites & Cloudflare", url: "https://modal.com/pricing", domain: "modal.com" },
+              { name: "Steel.dev & Browserbase Remote Browser Fleets", url: "https://steel.dev/pricing", domain: "steel.dev" },
+              { name: "Vast.ai, RunPod & Lambda Labs Paid GPU Clouds", url: "https://www.runpod.io/pricing", domain: "runpod.io" }
             ].map((src, i) => (
               <a
                 key={i}
@@ -574,7 +583,7 @@ export default function HomePage() {
       <footer className="border-t border-slate-800/80 bg-slate-950 py-10 text-xs text-slate-400">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <strong className="text-white">The 2026 Edge AI &amp; Cloud Sandbox Atlas</strong> • Built with Next.js App Router, TypeScript &amp; Tailwind CSS.
+            <strong className="text-white">The 2026 Edge AI &amp; Cloud Sandbox Atlas</strong> • 100% Paid Commercial Tiers &amp; Subsidized US/CN Subscription Logins.
           </div>
           <div className="flex items-center gap-4">
             <a

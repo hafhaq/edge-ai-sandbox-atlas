@@ -1,70 +1,30 @@
-# Revision 5: Final Synthesis, Editorial Blog Architecture & Interactive Widget Blueprint
+# Revision 5: Final Synthesis — The Paid Compute + Subsidized LLM Matrix & Interactive Decision Engine
 
-> **Date:** November 2026  
-> **Stage:** Revision 5 of 5 (Final Synthesis, UX/UI Critique & Next.js Static Export Specification)  
-> **Purpose:** Challenge our presentation and UX assumptions. Transform the 4 previous technical revisions into an authoritative, richly illustrated, interactive long-form engineering essay and live benchmark atlas built with Next.js (`output: 'export'`) and published to GitHub Pages.
-
----
-
-## 1. Challenging Our UX & Editorial Assumptions
-
-### Assumption 5.1: "A gigantic pricing table at the top of the page is the best way to present 20+ cloud sandbox providers."
-* **The Challenge:** In Revision 1, we planned to open with a massive table. However, readers visiting a technical deep-dive want **narrative clarity first** (why the shift from stateless LLMs to stateful cloud computers is happening), backed by **visual evidence (figures, SVG architecture diagrams, price-to-power scatter plots)**, and **interactive calculators** where they can plug in *their* workload parameters.
-* **The Fix (The "Distill.pub meets Pragmatic Engineer" Blog Format):**
-  1. **Long-Form Essay Spine:** Written like an authoritative, opinionated investigative engineering post with reading time, table of contents sidebar, pull-quotes, mathematical callouts, and inline citations.
-  2. **Rich Figures, Charts & Sourced Architecture Visuals:**
-     - **Figure 1 (Interactive Bar & Crossover Chart):** *Wall-Clock Monthly Cost vs. Active-CPU & Per-Second MicroVM Cost across Concurrency Levels (1x to 100x).*
-     - **Figure 2 (Scatter Plot / Frontier Matrix):** *Price-to-Power Frontier across 22 Providers* (X-axis: Normalized Effective Monthly Cost or Hourly Compute Rate; Y-axis: Compute Density & Isolation Score; Bubble Size: RAM/VRAM allocation).
-     - **Figure 3 (DeepSeek + Non-Major Cloud Arbitrage Stacked Chart):** *Monthly Token + Compute TCO Breakdown* comparing Uncached Frontier APIs vs. DeepSeek V4.1 Flash / V4 Pro with 85% Prefix Cache Hit + UTC Off-Peak Scheduling on Hetzner/Netcup/Oracle OCI.
-     - **Figure 4 (Annotated Visual Gallery with Direct Primary Sources):** High-contrast architectural schematics and provider cards linking directly to verified pricing documentation (`openai.com`, `e2b.dev`, `modal.com`, `daytona.io`, `fly.io`, `cloudflare.com`, `browserbase.com`, `steel.dev`, `hetzner.com`, `contabo.com`, `netcup.com`, `deepseek.com`, `runpod.io`, `vast.ai`, `lambdalabs.com`).
-     - **Figure 5 (Mobile Pocket Control Plane Network Topology Diagram):** Visual schematic of the *Phone -> Tailscale WireGuard Mesh -> UDP Mosh -> Tmux/Zellij -> OpenClaw / Claude Code / Steel Live Browser* architecture.
+> **Date:** November 2026 (Updated post-critique)  
+> **Stage:** Revision 5 of 5 (Final Synthesis, UX Verification & Next.js Static Export Architecture)  
+> **Purpose:** Synthesize Revisions 1–4 into a rigorous, opinionated engineering blog post and interactive benchmark atlas that: (1) eliminates all unreliable free tiers, (2) compares all major players (Anthropic, OpenAI, xAI Grok, Google Jules/Gemini, Replit, Cursor, Devin/Windsurf, GitHub Codespaces) alongside MicroVMs, Remote Browsers, Non-Major Cloud VMs, and GPU Factories, and (3) models **paid subsidized US & Chinese monthly LLM subscriptions** logged directly into your compute sandbox.
 
 ---
 
-## 2. Specification of the 4 Interactive JavaScript Widgets
+## 1. Summary of Architectural Corrections from User Feedback
 
-To make the blog post genuinely useful as a live decision engine, we will embed **4 interactive JavaScript/React widgets** directly inside the narrative sections:
-
-### Widget 1: The Interactive Workload & Sandbox TCO Simulator
-* **Controls:**
-  - **Workload Preset Selector:** `Remote Browser Fleet` | `OpenClaw 24/7 Personal Agent` | `Burst Code Sandbox (E2B/Modal/Daytona)` | `AI Factory (GPU Inference/Training)` | `Enterprise Autonomous Teammate (OpenAI Dots)`
-  - **Sliders:**
-    - Daily Active Compute Hours (`0.5 hr` to `24 hrs/day`)
-    - Peak Parallel Concurrency (`1` to `100 concurrent sandboxes`)
-    - Minimum RAM / VRAM Requirement (`2 GB` to `80 GB`)
-    - Daily Token Volume (`1M` to `200M tokens/month`)
-    - DeepSeek Prefix Cache Hit Ratio (`0%` to `95%`) & Off-Peak UTC Scheduling Toggle (`On/Off`)
-* **Live Output:** Dynamically calculates and ranks the **Top 5 Most Cost-Effective Stacks** for that exact profile, showing monthly Infra Cost, Token Cost, Total TCO, Cold-Start Latency, and why it wins.
-
-### Widget 2: DeepSeek + Non-Major Cloud VM Arbitrage Calculator & UTC Off-Peak Clock
-* **Controls:**
-  - Select Non-Major Cloud Host: `Oracle OCI Free Tier ($0, 4 ARM / 24GB)` | `OVHcloud VPS-1 ($4.50, 2 vCPU / 4GB)` | `Contabo VPS 4 ($5.28, 4 vCPU / 8GB)` | `Netcup VPS 1000 G11 ($6.20, 4 vCPU / 8GB NVMe)` | `Hetzner CAX21 ARM ($7.50, 4 vCPU / 8GB)` | `Hetzner CPX31 ($14.50, 4 AMD vCPU / 8GB)`
-  - Select Model Routing Mix: `% DeepSeek V4.1 Flash` vs `% DeepSeek V4 Pro` vs `% Claude Sonnet / GPT-6`
-  - **Live UTC Peak/Off-Peak Visualizer:** Interactive 24-hour UTC timeline bar showing DeepSeek's 2x Peak windows (`01:00–04:00 UTC` and `06:00–10:00 UTC`) vs 1x Off-Peak windows, with a timezone converter so readers can see their exact local off-peak cron hours.
-
-### Widget 3: Comprehensive 22-Provider Filterable & Sortable Atlas Table
-* **Controls:**
-  - Filter by Category (`All`, `Managed Agent Computer`, `MicroVM Code Sandbox`, `Remote Browser`, `Non-Major Cloud VPS`, `GPU AI Factory`)
-  - Filter by Isolation Tech (`Firecracker MicroVM`, `gVisor`, `KVM Full VM`, `Docker/Container`, `Managed Chromium`, `Dedicated GPU`)
-  - Search & Sort by Hourly Cost, Monthly Base Subscription, RAM/VRAM per Dollar, or Cold-Start Speed.
-  - Expandable row drawer showing exact subscription tiers, overage fees, gotchas, and primary source citation links.
-
-### Widget 4: Interactive Mobile VM Bootstrap & Stack Builder ("Pocket Control Plane Generator")
-* **Controls:**
-  - Pick Your Mobile OS: `iOS (iPhone / iPad)` | `Android`
-  - Pick Your Control Interface: `Blink Shell + Mosh` | `Termius + Tailscale SSH` | `Termux Native` | `Happy (Claude Code UI)` | `Telegram Bot Bridge (OpenClaw)`
-  - Pick Your Agent Workload: `OpenClaw + DeepSeek` | `Claude Code CLI` | `Steel.dev Remote Browser + Tailscale Serve`
-* **Live Output:** Generates a customized, copy-pasteable `cloud-init` / bash bootstrap script and step-by-step mobile setup checklist tailored to the reader's phone and agent stack.
+1. **Zero Reliance on Unreliable Free Tiers:**
+   - Removed Oracle OCI Free Tier and Modal $30 free credit as primary winners. Every provider is evaluated strictly on **paid, commercial, always-available tiers** (e.g., Netcup VPS 1000 G11 at $6.20/mo, Hetzner CAX21 at $7.50/mo, Hetzner CPX31 at $14.50/mo, Contabo VPS 4/6 at $5.28–$10.50/mo, Replit Core at $25/mo, Browserbase at $20–$99/mo, E2B Pro at $150/mo + $0.17/hr, Modal paid rate at $0.079/hr).
+2. **Full Big-Player Coverage:**
+   - Added deep comparisons of **Anthropic Claude Code (Pro $20 / Max $100 / Ultra $200)**, **Replit (Core $25 / Pro $100 / Reserved VMs)**, **xAI SuperGrok & Grok Build ($30–$200/mo on Memphis Colossus)**, **Google AI Pro ($19.99) / Ultra ($99.99) with Jules Async Cloud VMs & Gemini CLI**, **Cursor Background Agents (Pro $20 / Pro+ $60 / Ultra $200)**, **Devin / Windsurf (Pro $20 / Max $200)**, and **GitHub Codespaces + Copilot (Pro $10 / Pro+ $39 / Max $100)**.
+3. **Paid Subsidized LLM Subscription Login Model (US + Chinese Plans) Instead of OpenRouter Per-Token Billing:**
+   - Redesigned **Widget #1** and **Widget #2** around the real-world workflow: **choosing a Paid Compute Host + logging in with 1 or 2 Paid Subsidized Monthly LLM Subscriptions** (comparing American plans like **Claude Pro/Max/Ultra, ChatGPT Plus/Pro, Google AI Pro/Ultra, SuperGrok, Copilot Pro+** against Chinese Coding Plans like **Z.ai GLM-5.3 Coding Plan, Alibaba Qwen3-Coder Plan, Moonshot Kimi K2.5 Code Pass, MiniMax M2.5-Highspeed M-Plan, and DeepSeek**).
 
 ---
 
-## 3. Revision Log Viewer Built Into the Site
-Because the user asked us to *"Do 5 revisions and challenge Your assumptions. Save revisions as planning docs before generating the final site and sharing the published site with me"*, we will:
-1. Commit all 5 Markdown files (`planning/revision-1-initial-survey.md` through `planning/revision-5-final-synthesis.md`) directly into the GitHub repository AND copy them to `public/planning/` so they are downloadable from the live site.
-2. Include an interactive **"5-Revision Assumption Challenge Drawer / Tab"** right inside the blog post so readers can inspect how each assumption was tested, challenged, and refined across Revisions 1 to 5!
+## 2. Updated Interactive JavaScript Widgets in the Next.js App
 
----
-
-## 4. Technical Stack & Deployment Checklist
-- **Framework:** Next.js (App Router, TypeScript, Tailwind CSS) configured with `output: 'export'` and `images: { unoptimized: true }` for zero-dependency static hosting on GitHub Pages.
-- **Repository:** Public GitHub repository under `hafhaq/edge-ai-sandbox-atlas` with GitHub Actions workflow (`.github/workflows/deploy.yml`) deploying to GitHub Pages, plus direct `gh-pages` branch publication so the live site URL is immediately active and verified.
+1. **Widget #1 (`WorkloadSimulatorWidget.tsx`): Paid Sandbox Compute + Subsidized LLM Subscription Matcher**
+   - Pick your workload (`24/7 OpenClaw Daemon`, `Full-Stack App Builder / Replit vs VPS`, `Async Repo PR Swarm`, `Stealth Remote Browser Fleet`, `GPU AI Factory`), set daily active hours, concurrency, and RAM/VRAM, and select your **Paid Subsidized LLM Login Pack** (e.g., *US Only: Claude Max $100*, *Dual US+CN Sweet Spot: Claude Pro $20 + Z.ai GLM Coding Plan $18*, *Google AI Pro $19.99 + Qwen Coder $19*, *SuperGrok $30 + Kimi Code $19*, or *Bundled Platform Credits*).
+2. **Widget #2 (`SubsidizedSubscriptionMatrixWidget.tsx` — replacing the old per-token calculator): The US + Chinese Subsidized LLM Login & Quota Blender**
+   - Interactive configurator comparing **11 Paid Monthly LLM Subscriptions** (Anthropic Claude Pro/Max/Ultra, OpenAI Plus/Pro, Google AI Pro/Ultra + Jules, xAI SuperGrok, GitHub Copilot Pro+, Z.ai GLM-5.3 Coding Plan, Alibaba Qwen Coder Plan, Moonshot Kimi Code, MiniMax M-Plan) paired with your choice of **Paid Non-Major Cloud VM or Big-Player Workspace**.
+   - Includes an interactive **5-Hour Rolling Quota & Timezone Off-Peak Multiplier Visualizer** showing how combining one US subscription ($20) + one Chinese Coding Plan ($18–$19) eliminates 5-hour rolling lockouts for **$38–$39/mo flat** (+ $6.20–$7.50/mo VM = **~$45/mo total all-in**).
+3. **Widget #3 (`ProviderAtlasWidget.tsx`): 24-Provider Paid Cloud Sandbox, Big-Player IDE & GPU Factory Matrix**
+   - Filterable, sortable table across all 24 paid providers (no free-tier bait), including Replit, Anthropic Claude Code Cloud, OpenAI Dots, Google Jules, Cursor Background Agents, Devin/Windsurf, GitHub Codespaces, E2B, Modal, Daytona, Fly Sprites, Cloudflare Sandboxes, Browserbase, Steel.dev, Browserless, Hetzner, Netcup, Contabo, OVHcloud, RunPod, Vast.ai, and Lambda Labs.
+4. **Widget #4 (`MobileControlWidget.tsx`): Pocket Control Plane & Mobile OAuth Login Bootstrap Generator**
+   - Generates tailored setup scripts including **mobile OAuth localhost callback bridging** for `claude auth login` / `openclaw models auth login --provider openai`, Chinese Coding Plan key injection, Tailscale WireGuard + UDP Mosh, and Replit/Jules/Claude mobile app comparisons.
