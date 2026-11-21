@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #020617;
+  color: #f8fafc;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Natural Interactions & Accessible Focus States from modern-web-guidance */
+:where(button) {
+  transition: box-shadow 150ms ease-out, transform 150ms ease-out, background-color 150ms ease-out;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 3px;
+}
