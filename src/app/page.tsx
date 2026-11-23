@@ -1,73 +1,49 @@
 import React from "react";
-import WorkloadSimulatorWidget from "@/components/WorkloadSimulatorWidget";
-import DeepSeekArbitrageWidget from "@/components/DeepSeekArbitrageWidget";
-import ProviderAtlasWidget from "@/components/ProviderAtlasWidget";
-import MobileControlWidget from "@/components/MobileControlWidget";
-import RevisionLogViewer from "@/components/RevisionLogViewer";
+import InteractiveAppendixTabs from "@/components/InteractiveAppendixTabs";
 import {
-  DutyCycleCrossoverChart,
-  PriceToPowerScatterChart,
-  MobileTopologyFigure
-} from "@/components/VisualFigures";
-import {
-  Terminal,
-  Cpu,
-  Globe,
-  Smartphone,
-  Sparkles,
-  BookOpen,
-  ExternalLink,
-  Layers,
   ArrowUpRight,
   GitBranch,
-  FileCode,
-  KeyRound
+  Terminal,
+  Cpu,
+  Smartphone,
+  Layers,
+  CheckCircle2,
+  Server,
+  KeyRound,
+  ArrowDown
 } from "lucide-react";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      {/* Top Sticky Editorial Header */}
-      <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-md">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-indigo-500 to-emerald-500 flex items-center justify-center font-mono font-bold text-slate-950 text-sm shadow-md">
-              VM
-            </div>
-            <div>
-              <div className="text-sm font-bold text-white tracking-tight flex items-center gap-2">
-                <span>Edge AI &amp; Cloud Sandbox Atlas</span>
-                <span className="hidden sm:inline-block text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                  100% Paid Tiers • US + CN Subsidized Logins
-                </span>
-              </div>
-              <div className="text-[11px] text-slate-400 hidden md:block">
-                Replit • Anthropic • Dots • Grok • Jules • Cursor • MicroVMs • Non-Major VMs • US/CN Coding Plans
-              </div>
-            </div>
-          </div>
+    <div className="min-h-screen bg-slate-950 text-slate-200">
+      {/* Minimal Sticky Editorial Top Bar */}
+      <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-md">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
+          <a href="#" className="flex items-center gap-2.5 text-white font-bold text-sm tracking-tight">
+            <span className="h-7 w-7 rounded-lg bg-gradient-to-br from-indigo-500 to-emerald-500 flex items-center justify-center font-mono text-xs text-slate-950 font-extrabold">
+              AF
+            </span>
+            <span>The Personal AI Factory Playbook</span>
+          </a>
 
-          <nav aria-label="Primary navigation" className="hidden lg:flex items-center gap-5 text-xs font-medium text-slate-300">
-            <a href="#thesis" className="hover:text-white transition-colors">
-              1. Big Players vs VMs
+          <nav aria-label="Article sections" className="hidden md:flex items-center gap-5 text-xs font-medium text-slate-400">
+            <a href="#tldr" className="hover:text-white transition-colors">
+              TL;DR
             </a>
-            <a href="#widget-simulator" className="hover:text-indigo-300 transition-colors">
-              2. Paid Simulator
+            <a href="#setting" className="hover:text-white transition-colors">
+              Setting
             </a>
-            <a href="#workload-deep-dive" className="hover:text-white transition-colors">
-              3. 5 Workloads
+            <a href="#big-idea" className="hover:text-white transition-colors">
+              Big Idea
             </a>
-            <a href="#subsidized-logins" className="hover:text-emerald-300 transition-colors">
-              4. US + CN Login Combo
+            <a href="#recommendations" className="hover:text-white transition-colors">
+              Stacks
             </a>
-            <a href="#widget-provider-atlas" className="hover:text-cyan-300 transition-colors">
-              5. 21-Provider Atlas
+            <a href="#how-to-build" className="hover:text-white transition-colors">
+              How to Build It
             </a>
-            <a href="#pocket-control" className="hover:text-indigo-300 transition-colors">
-              6. Phone VM Control
-            </a>
-            <a href="#five-revisions" className="hover:text-amber-300 transition-colors">
-              7. 5 Revisions
+            <a href="#interactive-lab" className="text-indigo-400 hover:text-indigo-300 transition-colors">
+              Data &amp; Calculators
             </a>
           </nav>
 
@@ -75,551 +51,400 @@ export default function HomePage() {
             href="https://github.com/hafhaq/edge-ai-sandbox-atlas"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-xl bg-slate-900 border border-slate-700 px-3.5 py-1.5 text-xs font-semibold text-white hover:bg-slate-800 transition-all shrink-0"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-slate-900 border border-slate-800 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-white hover:border-slate-700 transition-colors"
           >
             <GitBranch className="h-3.5 w-3.5 text-indigo-400" />
-            <span>GitHub Repo</span>
-            <ArrowUpRight className="h-3.5 w-3.5 text-slate-400" />
+            <span>Repo</span>
+            <ArrowUpRight className="h-3 w-3 text-slate-500" />
           </a>
         </div>
       </header>
 
-      {/* Hero Editorial Banner */}
-      <div className="relative overflow-hidden border-b border-slate-800/80 bg-gradient-to-b from-indigo-950/30 via-slate-950 to-slate-950 pt-12 pb-16">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-indigo-300 mb-4">
-            <span className="rounded-full bg-indigo-500/15 border border-indigo-500/30 px-3 py-1 font-semibold">
-              SYSTEMS ARCHITECTURE MONOGRAPH • ZERO FREE-TIER RELIANCE
+      {/* Clean Editorial Article Container */}
+      <main className="mx-auto max-w-3xl px-4 sm:px-6 py-12 sm:py-16">
+        {/* Article Title & Metadata */}
+        <header className="mb-12">
+          <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-400 mb-4">
+            <span className="rounded-full bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-0.5 text-emerald-300 font-semibold">
+              FIELD GUIDE • NOVEMBER 2026
             </span>
-            <span className="text-slate-500">•</span>
-            <span className="text-slate-400">28 Min Read</span>
-            <span className="text-slate-500">•</span>
-            <span className="text-emerald-400">21 Paid Compute Providers + 11 US/Chinese Subsidized LLM Plans</span>
+            <span>•</span>
+            <span>9 min read</span>
+            <span>•</span>
+            <a href="#interactive-lab" className="text-indigo-400 hover:underline">
+              Includes interactive calculators &amp; 21-provider dataset ↓
+            </a>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
-            Stop Paying Per-Token API Taxes &amp; Stop Waiting on Free Tiers:{" "}
-            <span className="bg-gradient-to-r from-indigo-400 via-cyan-300 to-emerald-400 bg-clip-text text-transparent">
-              The 2026 Paid Cloud Sandbox &amp; Subsidized LLM Login Atlas
-            </span>
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.12]">
+            Building Your First AI Factory: Cloud Sandboxes, Subsidized Subscriptions &amp; Pocket Control
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed font-serif">
-            How do <strong>Replit</strong>, <strong>Anthropic Claude Cloud</strong>,{" "}
-            <strong>OpenAI Dots</strong>, <strong>Google Jules</strong>, <strong>xAI SuperGrok</strong>,{" "}
-            <strong>Cursor</strong>, <strong>Devin/Windsurf</strong>, and <strong>GitHub Codespaces</strong>{" "}
-            stack up against a paid €6–€14 European NVMe VM when you log into your compute with a{" "}
-            <strong>flat-rate subsidized US + Chinese LLM subscription</strong> (Claude Pro/Max, ChatGPT Plus/Pro, Google AI Pro, Z.ai GLM-5.3, Alibaba Qwen Coder, Moonshot Kimi Code, MiniMax M2.5)?
+          <p className="mt-5 text-lg sm:text-xl text-slate-400 leading-relaxed font-serif">
+            A practical, no-fluff guide to turning cheap dedicated compute and flat-rate AI subscriptions into an always-on engineering machine—without paying per-token API markups, gambling on unreliable free tiers, or staying chained to a laptop.
+          </p>
+        </header>
+
+        {/* 1. INTRO & TL;DR */}
+        <section id="tldr" className="scroll-mt-20 mb-14">
+          <div className="rounded-2xl border border-indigo-500/30 bg-gradient-to-b from-indigo-950/30 to-slate-900/70 p-6 sm:p-7">
+            <div className="text-xs font-mono font-bold uppercase tracking-wider text-indigo-300 mb-3">
+              TL;DR — THE EXECUTIVE SUMMARY
+            </div>
+            <ul className="space-y-3 text-sm sm:text-base text-slate-200 leading-relaxed">
+              <li className="flex items-start gap-2.5">
+                <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-1" />
+                <span>
+                  <strong>Separate compute from intelligence.</strong> Bundled cloud IDEs (Replit Reserved VMs, 24/7 GitHub Codespaces) charge a 5x–17x markup on raw RAM and CPU. Rent a paid commercial Linux VPS or bare-metal box instead—skip unreliable free tiers entirely.
+                </span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-1" />
+                <span>
+                  <strong>Log in with flat-rate subscriptions, not metered API keys.</strong> Autonomous agents burn millions of tokens just staying aware. Authenticate your CLI agents directly with a paid <strong>American subscription</strong> (Claude Pro/Max, ChatGPT Plus/Pro, Google AI Pro, SuperGrok) paired with a flat-rate <strong>Chinese Coding Plan</strong> (Z.ai GLM-5.3, Qwen Coder, Kimi Code, MiniMax) so you never hit a 5-hour lockout or a surprise bill.
+                </span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-1" />
+                <span>
+                  <strong>Match the topology to the workload.</strong> Solo builders need one $6–$15/mo 8–16 GB NVMe server. Startups need one 64–128 GB bare-metal host sliced into isolated containers (not shared RDP). Heavy 3D/C++ teams (like Unreal Engine) should put one 64–128 GB build/editor server behind an MCP lock queue and let lightweight agent VMs take turns.
+                </span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-1" />
+                <span>
+                  <strong>Steer it from your phone.</strong> Close public Port 22, run <strong>Tailscale + UDP Mosh + Tmux</strong> so cellular handoffs never freeze your terminal, and use voice-dictated chat bridges or 1-tap approval UIs when away from your desk.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* 2. THE SETTING */}
+        <section id="setting" className="scroll-mt-20 mb-14 space-y-5 font-serif text-base sm:text-[17px] leading-relaxed text-slate-300">
+          <div className="font-sans text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
+            01 • THE SETTING
+          </div>
+          <h2 className="font-sans text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Why &ldquo;Chatting With an LLM&rdquo; Gave Way to Cloud Sandboxes
+          </h2>
+
+          <p>
+            For the first few years of generative AI, the default developer workflow was copy-paste: ask a web chat window for a snippet, paste it into a local editor, run tests on your laptop, and repeat. That loop hits a hard ceiling the moment you want agents to actually <em>build</em>—cloning repositories, installing dependencies, running headless browsers, executing test suites, and iterating for hours while your laptop lid is closed.
           </p>
 
-          {/* Key Quantitative Takeaways Strip */}
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <div className="rounded-xl bg-slate-900/90 border border-slate-800 p-3.5">
-              <div className="text-[11px] font-mono uppercase text-emerald-400">US + CN Dual-Sub Sweet Spot</div>
-              <div className="text-2xl font-mono font-bold text-white mt-0.5">$44.20/mo</div>
-              <div className="text-[11px] text-slate-400 mt-0.5">
-                Netcup 8GB/256GB VM ($6.20) + Claude Pro ($20) + Z.ai GLM Plan ($18)
+          <p>
+            In response, the industry rushed to wrap AI models in hosted computers. OpenAI introduced always-on <strong>Dots</strong> ($100–$500/mo). Anthropic shipped <strong>Claude Code Cloud</strong>. Google bundled 15 to 60 concurrent async <strong>Jules</strong> coding VMs into Google AI Pro ($19.99/mo). Replit, Cursor, Devin/Windsurf, and GitHub Codespaces all built cloud workspaces, while specialist infrastructure platforms—<strong>E2B, Modal, Daytona, Fly.io Sprites, Cloudflare Sandboxes, Browserbase, and Steel.dev</strong>—engineered sub-second microVMs and stealth browser fleets.
+          </p>
+
+          <p>
+            For someone trying to stand up their first <strong>AI factory</strong>—an always-on, repeatable production line of coding, research, and automation agents—the market now looks paralyzingly fragmented. Most newcomers fall into one of three traps:
+          </p>
+
+          <ol className="list-decimal pl-5 space-y-2.5 text-slate-300">
+            <li>
+              <strong className="text-white font-sans">The Per-Token Bleed:</strong> Wiring an autonomous agent (like OpenClaw or a continuous coding harness) to a metered API aggregator. Background heartbeats and multi-file context loops quietly rack up $200–$500/month in token bills.
+            </li>
+            <li>
+              <strong className="text-white font-sans">The Cloud IDE Markup:</strong> Leaving a 4-core GitHub Codespace ($0.36/hr = $262/mo) or a Replit Reserved VM + active database running 24/7, paying hyperscaler margins for basic Linux compute.
+            </li>
+            <li>
+              <strong className="text-white font-sans">The Free-Tier Mirage:</strong> Building critical workflows on hobby credits or Oracle Cloud free ARM instances that throw capacity errors or silently reclaim idle servers.
+            </li>
+          </ol>
+        </section>
+
+        {/* 3. THE BIG IDEA */}
+        <section id="big-idea" className="scroll-mt-20 mb-14 space-y-5 font-serif text-base sm:text-[17px] leading-relaxed text-slate-300">
+          <div className="font-sans text-xs font-mono font-bold uppercase tracking-wider text-emerald-400">
+            02 • THE BIG IDEA
+          </div>
+          <h2 className="font-sans text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Decouple Commodity Metal From Subsidized Intelligence—Then Queue the Heavy Iron
+          </h2>
+
+          <p>
+            Every high-leverage AI factory in 2026 rests on three architectural principles that flip the cost curve by an order of magnitude:
+          </p>
+
+          <div className="my-6 space-y-4 font-sans not-prose">
+            <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-5">
+              <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm mb-1.5">
+                <KeyRound className="h-4 w-4" /> Principle 1: Dual-Flag Subsidized Logins Eliminate Both Overage Bills &amp; 5-Hour Lockouts
               </div>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                AI labs subsidize flat-rate monthly plans heavily. When you authenticate your CLI agent inside a Linux VM using a $20–$100 American plan (<strong>Claude Pro/Max</strong>, <strong>ChatGPT Plus/Pro OAuth</strong>, <strong>Google AI Pro</strong>, or <strong>SuperGrok</strong>), you unlock hundreds of dollars of inference for a fixed fee—subject to a 5-hour rolling quota cap. Pair that primary US login with a flat-rate $18–$19/mo Chinese Coding Plan (<strong>Z.ai GLM-5.3</strong>, <strong>Alibaba Qwen Coder</strong>, <strong>Moonshot Kimi K2.5</strong>, or <strong>MiniMax M2.5</strong>). When your US window approaches its limit—or during routine background loops—your harness seamlessly rolls over. Bonus: Chinese plans like Z.ai apply a 0.5x off-peak credit multiplier during US/European daytime, doubling your effective quota.
+              </p>
             </div>
-            <div className="rounded-xl bg-slate-900/90 border border-slate-800 p-3.5">
-              <div className="text-[11px] font-mono uppercase text-cyan-400">Async Cloud VM Bargain</div>
-              <div className="text-2xl font-mono font-bold text-white mt-0.5">$19.99/mo</div>
-              <div className="text-[11px] text-slate-400 mt-0.5">
-                Google AI Pro: 15 Concurrent Jules Cloud VMs (100/day) + 1.5k CLI calls
+
+            <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-5">
+              <div className="flex items-center gap-2 text-indigo-400 font-bold text-sm mb-1.5">
+                <Server className="h-4 w-4" /> Principle 2: Match Static Metal vs. Per-Second MicroVMs by Duty Cycle
               </div>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Continuous 24/7 agents belong on paid non-major European/US cloud VMs (<strong>Netcup</strong>, <strong>Hetzner</strong>, <strong>Contabo</strong>, <strong>OVHcloud</strong>) where 4 vCPU / 8 GB RAM / 256 GB NVMe costs $6.20–$7.50/month. Conversely, massive parallel fan-outs (running 40 isolated code builds for 30 seconds each) belong on per-second microVMs (<strong>Modal</strong> at $0.079/hr, <strong>Daytona</strong> &lt;90ms boot, <strong>E2B</strong> Firecracker snapshots, or <strong>Cloudflare</strong> active-CPU sandboxes). And when agents must browse anti-bot protected websites, offload Chromium to <strong>Steel.dev</strong> or <strong>Browserbase</strong> so datacenter IPs don&apos;t get blocked.
+              </p>
             </div>
-            <div className="rounded-xl bg-slate-900/90 border border-slate-800 p-3.5">
-              <div className="text-[11px] font-mono uppercase text-indigo-400">Heavy Marathon Stack</div>
-              <div className="text-2xl font-mono font-bold text-white mt-0.5">$134.50/mo</div>
-              <div className="text-[11px] text-slate-400 mt-0.5">
-                Netcup 16GB/512GB ($15.50) + Claude Max 5x ($100) + MiniMax M2.5 ($19)
+
+            <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-5">
+              <div className="flex items-center gap-2 text-amber-400 font-bold text-sm mb-1.5">
+                <Cpu className="h-4 w-4" /> Principle 3: Asymmetric Hub-and-Spoke Scaling for Teams &amp; Heavy Toolchains
               </div>
-            </div>
-            <div className="rounded-xl bg-slate-900/90 border border-slate-800 p-3.5">
-              <div className="text-[11px] font-mono uppercase text-amber-400">24/7 Codespaces Trap</div>
-              <div className="text-2xl font-mono font-bold text-rose-400 mt-0.5">$301.80/mo</div>
-              <div className="text-[11px] text-slate-400 mt-0.5">
-                4-Core Codespace 24/7 ($262.80) + Copilot Pro+ ($39) = 17x VM Markup
-              </div>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                AI agents spend ~85% of their time reading text, reasoning, and waiting on tokens—and only ~15% hammering heavy compilers, shaders, or GPUs. For startups, don&apos;t buy 6 expensive cloud workstations or cram everyone onto one shared Windows/Linux RDP desktop (which causes port collisions and account-sharing bans). Slice one <strong>64–128 GB bare-metal server</strong> into isolated per-seat containers (each with its own subsidized LLM login). For ultra-heavy workloads like <strong>Unreal Engine 5</strong> or massive C++ monorepos, keep <strong>one 64–128 GB build/editor hub behind a queued MCP server</strong> (with hot <code className="text-amber-200">git worktree</code> slots and a shared Derived Data Cache) while lightweight $6–$8 agent VMs queue their turns for compiles, Blueprint inspection, and viewport screenshots.
+              </p>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      {/* Main Blog Post Container */}
-      <main className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12">
-        {/* Section 1: The Architectural Thesis */}
-        <article className="prose prose-invert max-w-none">
-          <section id="thesis" className="scroll-mt-20">
-            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-indigo-400 font-bold mb-2">
-              <BookOpen className="h-4 w-4" /> PART I • GOING WIDE: BIG PLAYERS, MICROVMS &amp; ZERO FREE-TIER LOTTERY
-            </div>
-            <h2 className="text-3xl font-bold text-white tracking-tight">
-              1. Two Rules of Production Agent Infrastructure: Never Rely on Free Tiers, and Never Pay Per-Token Retail for Daily Loops
-            </h2>
-
-            <p className="mt-4 text-slate-300 leading-relaxed text-base font-serif">
-              If you read surface-level tutorials on running{" "}
-              <a
-                href="https://openclaw.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-emerald-400 underline hover:text-emerald-300"
-              >
-                OpenClaw
-              </a>{" "}
-              or{" "}
-              <a
-                href="https://claude.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-400 underline hover:text-indigo-300"
-              >
-                Claude Code
-              </a>{" "}
-              in the cloud, they almost always recommend two things that fail in real engineering workflows: spinning up an Oracle Cloud (OCI) Always-Free ARM instance, and pasting in a metered OpenRouter or raw console API key.
-            </p>
-
-            <blockquote className="my-6 border-l-4 border-amber-500 bg-slate-900/80 p-5 rounded-r-xl text-slate-200 italic font-serif">
-              &ldquo;When we challenged our own initial assumptions, two truths stood out immediately: First, free tiers are a mirage—OCI Always-Free throws &lsquo;Out of Host Capacity&rsquo; errors for weeks and reclaims idle VMs without warning, while sandbox hobby tiers kill your sessions after 15 to 60 minutes. Second, real developers do not attach an uncapped per-token OpenRouter meter to an autonomous 24/7 agent. They log into their compute using heavily subsidized, flat-rate monthly LLM subscriptions from major American and Chinese AI labs.&rdquo;
-            </blockquote>
-
-            <p className="text-slate-300 leading-relaxed text-base font-serif">
-              Once you insist on <strong>100% paid, SLA-backed commercial compute</strong> and{" "}
-              <strong>predictable flat-rate monthly LLM logins</strong>, the 2026 cloud sandbox market splits into a fascinating architectural showdown between <strong>Bundled Big-Player Agent Workspaces</strong> and <strong>Modular Non-Major Cloud VMs + Subsidized CLI Logins</strong>:
-            </p>
-
-            <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
-              <div className="rounded-xl bg-slate-900/90 border border-indigo-500/30 p-5">
-                <div className="text-xs font-mono font-bold uppercase text-indigo-300">
-                  Camp A • Bundled Big-Player Agent Workspaces
-                </div>
-                <ul className="mt-3 space-y-2 text-xs text-slate-300">
-                  <li>
-                    • <strong>Replit (Core $25/mo • Pro $100/mo):</strong> 4 vCPU / 4 GB dev container + Replit Agent + built-in Postgres &amp; mobile app ($20/$100 monthly credit pool).
-                  </li>
-                  <li>
-                    • <strong>Anthropic Claude Cloud (Pro $20 • Max $100 • Ultra $200):</strong> First-party `claude --cloud` repo containers + 1x, 5x, or 10x Claude 4.6 Sonnet/Opus coding quota.
-                  </li>
-                  <li>
-                    • <strong>OpenAI Dots &amp; Codex (Plus $20 • Pro $100–$500/mo):</strong> Dedicated always-on Cloud Dot VM + browser on Pro ($100+), plus official OAuth CLI login.
-                  </li>
-                  <li>
-                    • <strong>Google AI Pro ($19.99/mo) &amp; Ultra ($99.99/mo):</strong> Includes <strong>Google Jules</strong> (100 to 300 async GitHub repo VM tasks/day across <strong>15 to 60 concurrent Google Cloud VMs</strong>) + 1,500 daily Gemini CLI requests!
-                  </li>
-                  <li>
-                    • <strong>xAI SuperGrok ($30–$200/mo), Cursor ($20/$60/$200), Devin/Windsurf ($20/$200) &amp; GitHub Codespaces ($0.18–$0.72/hr + Copilot $10/$39/$100).</strong>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="rounded-xl bg-slate-900/90 border border-emerald-500/30 p-5">
-                <div className="text-xs font-mono font-bold uppercase text-emerald-300">
-                  Camp B • Paid Non-Major VM + Dual US/CN Subsidized Logins
-                </div>
-                <ul className="mt-3 space-y-2 text-xs text-slate-300">
-                  <li>
-                    • <strong>Paid Sovereign Compute ($5.28 to $15.50/mo):</strong> <strong>Netcup VPS 1000 G11</strong> ($6.20/mo for 4 vCPU, 8 GB DDR5, <strong>256 GB NVMe</strong>), <strong>Netcup RS 2000</strong> ($15.50/mo for 8 dedicated cores, 16 GB DDR5, 512 GB NVMe), <strong>Hetzner CAX21/CPX31</strong> ($7.50–$14.50/mo), or <strong>Contabo VPS 6</strong> ($10.50/mo for 16 GB RAM).
-                  </li>
-                  <li>
-                    • <strong>Log In With Your Paid US Subscription:</strong> Run `claude auth login` (Claude Pro/Max), `openclaw models auth login --provider openai` (ChatGPT Plus/Pro OAuth), `gemini auth login` (Google AI Pro), or inject your SuperGrok token.
-                  </li>
-                  <li>
-                    • <strong>Pair With a Flat-Rate Chinese Coding Plan ($18–$19/mo):</strong> Add <strong>Z.ai GLM-5.3 Coding Plan ($18/mo)</strong>, <strong>Alibaba Qwen Coder ($19/mo)</strong>, <strong>Moonshot Kimi Code ($19/mo)</strong>, or <strong>MiniMax M-Plan ($19/mo)</strong> inside the exact same CLI so your agent never stops when a 5-hour US quota window fills up!
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-        </article>
-
-        {/* Figure 1: Bundled IDEs vs Modular VM + Subsidized Logins */}
-        <DutyCycleCrossoverChart />
-
-        {/* Widget 1: Interactive Paid Compute + Subsidized LLM Matcher */}
-        <WorkloadSimulatorWidget />
-
-        {/* Section 2: Deep Dive into the 5 Core Workloads */}
-        <section id="workload-deep-dive" className="mt-16 scroll-mt-20">
-          <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold mb-2">
-            <Layers className="h-4 w-4" /> PART II • GOING DEEP: BIG PLAYERS vs. SPECIALISTS ACROSS 5 WORKLOADS
+        {/* 4. CONCRETE RECOMMENDATIONS */}
+        <section id="recommendations" className="scroll-mt-20 mb-14">
+          <div className="font-sans text-xs font-mono font-bold uppercase tracking-wider text-cyan-400">
+            03 • RECOMMENDATIONS BY STAGE
           </div>
-          <h2 className="text-3xl font-bold text-white tracking-tight">
-            2. Where Replit, Anthropic, Grok, Google Jules, MicroVMs &amp; Non-Major Cloud VMs Actually Win
+          <h2 className="font-sans text-2xl sm:text-3xl font-bold text-white tracking-tight mt-2">
+            Four Battle-Tested AI Factory Blueprints (100% Paid, Zero Flaky Free Tiers)
           </h2>
           <p className="mt-3 text-slate-300 font-serif text-base leading-relaxed">
-            When you look past marketing landing pages and examine actual vCPU allocations, RAM ceilings, credit cannibalization, and 5-hour rolling windows, each workload has a distinct price-to-power sweet spot:
+            Pick the tier that matches what you are building today. Every stack below uses SLA-backed commercial compute and flat-rate subscriptions with predictable monthly caps.
           </p>
 
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Card 1: Replit & Codespaces vs Modular VM */}
-            <div className="rounded-2xl border border-purple-500/30 bg-slate-900/80 p-6 flex flex-col justify-between">
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Blueprint 1 */}
+            <div className="rounded-2xl border border-emerald-500/30 bg-slate-900/80 p-5 flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-[11px] font-mono font-bold uppercase px-2.5 py-1 rounded-full bg-purple-500/15 text-purple-300 border border-purple-500/30">
-                    WORKLOAD 1 • ALL-IN-ONE CLOUD IDEs vs. SOVEREIGN VPS
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold uppercase text-emerald-400">
+                    1. SOLO BUILDER SWEET SPOT
                   </span>
-                  <Terminal className="h-5 w-5 text-purple-400" />
+                  <span className="font-mono font-bold text-white text-lg">$44/mo</span>
                 </div>
-                <h3 className="text-xl font-bold text-white">
-                  Replit Core/Pro &amp; GitHub Codespaces vs. Netcup / Hetzner + Dokploy
+                <h3 className="text-lg font-bold text-white mt-1">
+                  24/7 Sovereign Personal Agent
                 </h3>
-                <p className="mt-2.5 text-xs text-slate-300 leading-relaxed">
-                  <strong>Replit Core ($25/mo)</strong> and <strong>Pro ($100/mo)</strong> shine when you want zero Linux administration: you open the Replit mobile or web app, prompt Replit Agent, and get an instant preview URL with managed Postgres.
-                </p>
-
-                <div className="mt-4 space-y-2 text-xs">
-                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
-                    <div className="font-bold text-amber-300">
-                      The Replit &amp; Codespaces Credit Trap on 24/7 Workloads:
-                    </div>
-                    <p className="text-slate-400 mt-0.5">
-                      Replit Core&apos;s $20 monthly credit pool is drawn down simultaneously by effort-based Agent checkpoints, Reserved Always-On VMs ($20–$50/mo for 1–2 vCPU), and active Postgres hours ($0.16/hr = $116/mo if active 24/7!). Similarly, running a 4-core / 16 GB <strong>GitHub Codespace</strong> ($0.36/hr) 24/7 costs <strong>$262.80/month</strong> in raw VM time alone.
-                    </p>
-                  </div>
-                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
-                    <div className="font-bold text-emerald-300">
-                      The Modular Alternative ($6.20–$15.50/mo):
-                    </div>
-                    <p className="text-slate-400 mt-0.5">
-                      A <strong>Netcup RS 2000 G11 ($15.50/mo)</strong> gives you <strong>8 dedicated AMD EPYC cores, 16 GB DDR5 RAM, and 512 GB NVMe</strong> 24/7/365—17x cheaper than a 24/7 Codespace.
-                    </p>
-                  </div>
-                </div>
+                <ul className="mt-3 space-y-1.5 text-xs text-slate-300">
+                  <li>• <strong>Compute:</strong> Netcup VPS 1000 G11 ($6.20/mo — 4 vCPU, 8 GB DDR5, 256 GB NVMe) or Hetzner CAX21 ($7.50/mo).</li>
+                  <li>• <strong>US Login:</strong> Claude Pro ($20/mo), ChatGPT Plus ($20/mo), or Google AI Pro ($19.99/mo + 15 async Jules VMs).</li>
+                  <li>• <strong>CN Companion:</strong> Z.ai GLM-5.3 Coding Plan ($18/mo) or Alibaba Qwen Coder ($19/mo).</li>
+                </ul>
               </div>
-
-              <div className="mt-4 pt-3 border-t border-slate-800 text-xs">
-                <span className="text-emerald-400 font-mono font-bold">
-                  Verdict: Replit Core ($25) for instant 0-ops prototyping; Netcup/Hetzner ($6.20–$15.50) for 24/7 servers.
-                </span>
+              <div className="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+                <strong>Best for:</strong> Always-on OpenClaw / Claude Code agents, side projects, and mobile-steered coding.
               </div>
             </div>
 
-            {/* Card 2: Async Repo Swarms (Jules, Claude Cloud, Cursor, Devin) */}
-            <div className="rounded-2xl border border-cyan-500/30 bg-slate-900/80 p-6 flex flex-col justify-between">
+            {/* Blueprint 2 */}
+            <div className="rounded-2xl border border-indigo-500/30 bg-slate-900/80 p-5 flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-[11px] font-mono font-bold uppercase px-2.5 py-1 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
-                    WORKLOAD 2 • ASYNC GITHUB REPO SWARMS
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold uppercase text-indigo-400">
+                    2. ZERO-OPS PROTOTYPER
                   </span>
-                  <FileCode className="h-5 w-5 text-cyan-400" />
+                  <span className="font-mono font-bold text-white text-lg">$25–$100/mo</span>
                 </div>
-                <h3 className="text-xl font-bold text-white">
-                  Google Jules ($19.99) vs. Anthropic Claude Cloud ($100) vs. Cursor Ultra &amp; Devin Max ($200)
+                <h3 className="text-lg font-bold text-white mt-1">
+                  All-in-One Managed Workspace
                 </h3>
-                <p className="mt-2.5 text-xs text-slate-300 leading-relaxed">
-                  What if you want 10 to 60 cloud sandboxes to clone your GitHub repo in parallel, fix issues, run tests, and open PRs while you commute?
-                </p>
-
-                <div className="mt-4 space-y-2 text-xs">
-                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
-                    <div className="font-bold text-cyan-300">
-                      1. Google AI Pro ($19.99/mo) &amp; Ultra ($99.99/mo) — The Hidden Giant
-                    </div>
-                    <p className="text-slate-400 mt-0.5">
-                      For $19.99/mo, Google bundles <strong>Jules</strong> with <strong>100 async coding VM tasks/day (15 concurrent Google-hosted VMs!)</strong> plus <strong>1,500 Gemini CLI requests/day</strong> on your own server and 5 TB Drive storage. Ultra ($99.99) scales to 300 tasks/day and 60 concurrent VMs.
-                    </p>
-                  </div>
-                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
-                    <div className="font-bold text-indigo-300">
-                      2. Claude Max ($100) / Ultra ($200), Cursor Ultra ($200) &amp; Devin Max ($200)
-                    </div>
-                    <p className="text-slate-400 mt-0.5">
-                      <strong>Anthropic Claude Max ($100)</strong> &amp; <strong>Ultra ($200)</strong> deliver the highest single-agent code reasoning quality (`claude --cloud` + local CLI). <strong>Cursor Ultra ($200)</strong> gives 50x multi-model pool + priority Background Agent VMs, while <strong>Devin/Windsurf Max ($200)</strong> gives a full graphical browser+IDE workstation per agent.
-                    </p>
-                  </div>
-                </div>
+                <ul className="mt-3 space-y-1.5 text-xs text-slate-300">
+                  <li>• <strong>Web Apps from Phone:</strong> Replit Core ($25/mo) for instant UI preview, auth &amp; 1-click deploys.</li>
+                  <li>• <strong>Async GitHub PRs:</strong> Google AI Pro ($19.99/mo — 100 Jules VM tasks/day) or Claude Max ($100/mo).</li>
+                  <li>• <strong>Enterprise SaaS Teammate:</strong> OpenAI Dots Pro ($100/mo) for 4,000+ pre-wired OAuth connectors.</li>
+                </ul>
               </div>
-
-              <div className="mt-4 pt-3 border-t border-slate-800 text-xs">
-                <span className="text-emerald-400 font-mono font-bold">
-                  Verdict: Google AI Pro ($19.99) for 15x async VM fan-out + Claude Max ($100) for deep architecture.
-                </span>
+              <div className="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+                <strong>Best for:</strong> Shipping prototypes fast when you refuse to touch Linux or Docker.
               </div>
             </div>
 
-            {/* Card 3: Stealth Remote Browser Fleets */}
-            <div className="rounded-2xl border border-pink-500/30 bg-slate-900/80 p-6 flex flex-col justify-between">
+            {/* Blueprint 3 */}
+            <div className="rounded-2xl border border-cyan-500/30 bg-slate-900/80 p-5 flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-[11px] font-mono font-bold uppercase px-2.5 py-1 rounded-full bg-pink-500/15 text-pink-300 border border-pink-500/30">
-                    WORKLOAD 3 • STEALTH REMOTE BROWSER FLEETS
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold uppercase text-cyan-400">
+                    3. STARTUP TEAM (5–10 SEATS)
                   </span>
-                  <Globe className="h-5 w-5 text-pink-400" />
+                  <span className="font-mono font-bold text-white text-lg">~$430/mo total</span>
                 </div>
-                <h3 className="text-xl font-bold text-white">
-                  Steel.dev &amp; Browserbase vs. Self-Hosted Steel on Contabo 16GB ($10.50/mo)
+                <h3 className="text-lg font-bold text-white mt-1">
+                  One Mega Bare-Metal Host + Isolated Pods
                 </h3>
-                <p className="mt-2.5 text-xs text-slate-300 leading-relaxed">
-                  Every modern SPA tab in headless Chromium eats 400 MB–1.2 GB of RAM, and 100% of raw VPS datacenter ASNs are blocked by Cloudflare Turnstile and DataDome.
-                </p>
-
-                <div className="mt-4 space-y-2 text-xs">
-                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
-                    <div className="font-bold text-pink-300">
-                      Managed Stealth: Browserbase ($20 / $99) &amp; Steel Cloud ($0.08–$0.10/hr)
-                    </div>
-                    <p className="text-slate-400 mt-0.5">
-                      <strong>Browserbase</strong> ($20/mo for 100 hrs, $99/mo for 500 hrs) and <strong>Steel.dev Paid Cloud</strong> ($0.08–$0.10/hr) handle residential proxy rotation, anti-bot fingerprinting, and live DOM session replay automatically.
-                    </p>
-                  </div>
-                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
-                    <div className="font-bold text-emerald-300">
-                      High-Volume Hybrid: Steel OSS Docker on Contabo VPS 6 (16 GB RAM, $10.50/mo)
-                    </div>
-                    <p className="text-slate-400 mt-0.5">
-                      Run Steel&apos;s open-source Docker container on a <strong>16 GB RAM Contabo VPS ($10.50/mo)</strong> and stream port `:5173` over Tailscale Serve to your phone so you can manually tap through 2FA logins!
-                    </p>
-                  </div>
-                </div>
+                <ul className="mt-3 space-y-1.5 text-xs text-slate-300">
+                  <li>• <strong>Compute:</strong> 1× Hetzner AX102 ($130/mo — Ryzen 7950X 32T, 128 GB DDR5, 3.8 TB NVMe) or Netcup RS 8000 ($48/mo, 64 GB).</li>
+                  <li>• <strong>Isolation:</strong> Proxmox LXC / Coder / Kasm WebRTC containers (1 per engineer, never shared RDP).</li>
+                  <li>• <strong>Per-Seat LLM:</strong> Individual $38/mo dual US+CN login per engineer (~$304/mo for 8 seats).</li>
+                </ul>
               </div>
-
-              <div className="mt-4 pt-3 border-t border-slate-800 text-xs">
-                <span className="text-emerald-400 font-mono font-bold">
-                  Verdict: Browserbase/Steel Cloud (&lt;200 hrs/mo); Contabo 16GB + Steel OSS (&gt;250 hrs/mo).
-                </span>
+              <div className="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+                <strong>Best for:</strong> Early-stage teams replacing $2,500/mo cloud workstations with dynamic 64 GB burst RAM.
               </div>
             </div>
 
-            {/* Card 4: Burst MicroVMs & Paid GPU AI Factories */}
-            <div className="rounded-2xl border border-amber-500/30 bg-slate-900/80 p-6 flex flex-col justify-between">
+            {/* Blueprint 4 */}
+            <div className="rounded-2xl border border-amber-500/30 bg-slate-900/80 p-5 flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-[11px] font-mono font-bold uppercase px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                    WORKLOAD 4 &amp; 5 • BURST MICROVMS &amp; GPU AI FACTORIES
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold uppercase text-amber-400">
+                    4. HEAVY 3D / C++ / GPU FACTORY
                   </span>
-                  <Cpu className="h-5 w-5 text-amber-400" />
+                  <span className="font-mono font-bold text-white text-lg">$198–$350/mo</span>
                 </div>
-                <h3 className="text-xl font-bold text-white">
-                  Modal, E2B, Daytona &amp; Cloudflare Sandboxes + RunPod / Vast / Lambda GPUs
+                <h3 className="text-lg font-bold text-white mt-1">
+                  Queued MCP Hub + Lightweight Spokes
                 </h3>
-                <p className="mt-2.5 text-xs text-slate-300 leading-relaxed">
-                  When your agent needs to spawn 50 isolated code sandboxes for 30 seconds or burst onto an 80 GB H100 GPU without paying 24/7 idle leases:
-                </p>
-
-                <div className="mt-4 space-y-2 text-xs">
-                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
-                    <div className="font-bold text-indigo-300">
-                      Burst Code MicroVMs: Modal ($0.079/hr), Daytona (&lt;90ms), E2B ($0.17/hr), Fly Sprites
-                    </div>
-                    <p className="text-slate-400 mt-0.5">
-                      <strong>Modal</strong> offers the lowest commercial per-second rate ($0.079/hr for 2 vCPU / 4 GiB). <strong>Daytona</strong> boots in &lt;90ms, <strong>E2B Pro</strong> ($150/mo + $0.17/hr) branches Firecracker memory snapshots in 150ms, and <strong>Fly.io Sprites / Cloudflare Sandboxes</strong> bill strictly on <em>active CPU cycles</em>.
-                    </p>
-                  </div>
-                  <div className="rounded-lg bg-slate-950 p-3 border border-slate-800">
-                    <div className="font-bold text-amber-300">
-                      Paid GPU Factories: Modal H100 ($3.95/hr per-sec), RunPod 4090 ($0.34/hr), Vast A100 ($0.67/hr)
-                    </div>
-                    <p className="text-slate-400 mt-0.5">
-                      Use <strong>Modal Serverless GPU</strong> for spiky sub-minute H100/B300 inference, <strong>RunPod / Vast.ai</strong> for cheap interactive RTX 4090 / A100 pods, and <strong>Lambda Labs</strong> ($4.29/hr H100) for zero-egress multi-node training.
-                    </p>
-                  </div>
-                </div>
+                <ul className="mt-3 space-y-1.5 text-xs text-slate-300">
+                  <li>• <strong>Heavy Hub:</strong> 1× Hetzner GEX44 ($198/mo — 64 GB RAM + RTX 4000 Ada 20 GB) or AX102 (128 GB CPU-only).</li>
+                  <li>• <strong>Agent Spokes:</strong> Light 8 GB containers (or read-only bind mounts on the same host) queuing compile/editor turns via an MCP lock broker.</li>
+                  <li>• <strong>Elastic Burst GPU:</strong> Modal Serverless H100 ($3.95/hr per-sec) or RunPod/Vast RTX 4090 ($0.34/hr).</li>
+                </ul>
               </div>
-
-              <div className="mt-4 pt-3 border-t border-slate-800 text-xs">
-                <span className="text-emerald-400 font-mono font-bold">
-                  Verdict: Modal ($0.079/hr CPU / $3.95/hr H100 per-sec) + Vast/RunPod ($0.34–$0.67/hr batch GPU).
-                </span>
+              <div className="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+                <strong>Best for:</strong> Unreal Engine 5, heavy C++/Rust monorepos, and batch inference pipelines.
               </div>
             </div>
           </div>
         </section>
 
-        {/* Figure 2: Price-to-Power Scatter Matrix */}
-        <PriceToPowerScatterChart />
-
-        {/* Section 3: The US + Chinese Subsidized LLM Subscription Login Strategy */}
-        <section id="subsidized-logins" className="mt-16 scroll-mt-20">
-          <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold mb-2">
-            <KeyRound className="h-4 w-4" /> PART III • THE DUAL-FLAG SUBSIDIZED LOGIN STRATEGY (REVISION 3)
+        {/* 5. HOW TO DO IT (STEP-BY-STEP INSTRUCTIONS) */}
+        <section id="how-to-build" className="scroll-mt-20 mb-14">
+          <div className="font-sans text-xs font-mono font-bold uppercase tracking-wider text-indigo-400">
+            04 • HOW TO DO IT
           </div>
-          <h2 className="text-3xl font-bold text-white tracking-tight">
-            3. Why Smart Engineers Pair One American Subscription ($20) + One Chinese Coding Plan ($18–$19) on Their Cloud VM
+          <h2 className="font-sans text-2xl sm:text-3xl font-bold text-white tracking-tight mt-2">
+            Stand Up Your AI Factory in 15 Minutes
           </h2>
-
-          <div className="mt-4 space-y-4 text-slate-300 font-serif text-base leading-relaxed">
-            <p>
-              In <strong>Revision 3</strong>, we analyzed how developers actually authenticate{" "}
-              <strong>Claude Code</strong>, <strong>OpenClaw</strong>, <strong>Codex CLI</strong>,{" "}
-              <strong>Gemini CLI</strong>, and <strong>OpenCode</strong> inside a dedicated cloud VM. Nobody wants a surprise $350 OpenRouter invoice at the end of the month. Instead, you log into your VM with a <strong>flat-rate, subsidized monthly subscription</strong>.
-            </p>
-            <p>
-              But there is a catch with relying on a single $20/month American subscription (like{" "}
-              <strong>Claude Pro $20</strong> or <strong>ChatGPT Plus $20</strong>): to protect their unit economics, Western labs enforce <strong>rolling 5-hour usage windows and weekly caps</strong>. If your autonomous agent enters a deep multi-file refactor or runs 15-minute background heartbeats, a single $20 plan hits its 5-hour ceiling in roughly <strong>90 to 110 minutes</strong>—leaving your cloud VM idle for the next 3+ hours unless you pay $100–$200/month for Max/Ultra.
-            </p>
-            <p>
-              Meanwhile, major Chinese AI labs—<strong>Z.ai (GLM-5.3)</strong>,{" "}
-              <strong>Alibaba Cloud (Qwen3-Coder)</strong>, <strong>Moonshot AI (Kimi K2.5)</strong>, and{" "}
-              <strong>MiniMax (M2.5-Highspeed)</strong>—have launched explicit{" "}
-              <strong>flat-rate monthly &ldquo;Coding Plan&rdquo; subscriptions ($18–$19/mo Lite/Standard, $39–$80/mo Pro)</strong> designed specifically to plug straight into <strong>Claude Code, OpenClaw, Cline, and Cursor</strong>! Even better, plans like Z.ai&apos;s GLM Coding Plan apply a{" "}
-              <strong>0.5x credit deduction multiplier during off-peak hours outside Beijing business peak</strong>, effectively giving US and European daytime developers <strong>double the subscription quota</strong>.
-            </p>
-          </div>
-
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="rounded-xl bg-slate-900 border border-indigo-500/30 p-5">
-              <div className="text-xs font-mono font-bold text-indigo-400 uppercase">
-                1. American OAuth Logins ($19.99–$100/mo)
-              </div>
-              <h4 className="text-base font-bold text-white mt-1">
-                Claude, ChatGPT, Google AI Pro &amp; SuperGrok
-              </h4>
-              <p className="text-xs text-slate-300 mt-2 leading-relaxed">
-                Authenticate <code className="text-indigo-300">claude auth login</code> (Claude Pro/Max), <code className="text-indigo-300">openclaw models auth login --provider openai</code> (official ChatGPT Plus/Pro OAuth), <code className="text-indigo-300">gemini auth login</code> (1,500 req/day + 15 concurrent Google Jules VMs!), or inject your <strong>xAI SuperGrok</strong> Colossus token.
-              </p>
-            </div>
-
-            <div className="rounded-xl bg-slate-900 border border-emerald-500/30 p-5">
-              <div className="text-xs font-mono font-bold text-emerald-400 uppercase">
-                2. Chinese Flat-Rate Coding Plans ($18–$19/mo)
-              </div>
-              <h4 className="text-base font-bold text-white mt-1">
-                Z.ai GLM-5.3, Qwen Coder, Kimi K2.5 &amp; MiniMax M2.5
-              </h4>
-              <p className="text-xs text-slate-300 mt-2 leading-relaxed">
-                Unlike consumer chat apps that block CLI harnesses, Chinese Coding Plans give you a dedicated flat-rate subscription token engineered for <strong>Claude Code &amp; OpenClaw</strong>—handling high-frequency tool loops, 2M-token repo ingestion (Kimi K2.5), and high-TPS test fixing (MiniMax M2.5).
-              </p>
-            </div>
-
-            <div className="rounded-xl bg-slate-900 border border-amber-500/30 p-5">
-              <div className="text-xs font-mono font-bold text-amber-400 uppercase">
-                3. The $44.20/mo Unstoppable Combo
-              </div>
-              <h4 className="text-base font-bold text-white mt-1">
-                Netcup 8GB VM ($6.20) + US ($20) + CN ($18)
-              </h4>
-              <p className="text-xs text-slate-300 mt-2 leading-relaxed">
-                Use your American login (Claude/GPT/Gemini/Grok) for top-level architectural planning and complex diffs, and auto-route background heartbeats &amp; 5-hour overflow to your Chinese Coding Plan. <strong>100% flat-rate, zero lockouts, zero per-token overages.</strong>
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Widget 2: US + Chinese Subsidized Subscription Blender */}
-        <DeepSeekArbitrageWidget />
-
-        {/* Widget 3: Complete 21-Provider Filterable Commercial Atlas */}
-        <ProviderAtlasWidget />
-
-        {/* Section 4: Managing Your Cloud Sandbox VM From Your Phone */}
-        <section id="pocket-control" className="mt-16 scroll-mt-20">
-          <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-indigo-400 font-bold mb-2">
-            <Smartphone className="h-4 w-4" /> PART IV • THE POCKET CONTROL PLANE (REVISION 4 ARCHITECTURE)
-          </div>
-          <h2 className="text-3xl font-bold text-white tracking-tight">
-            4. How to Command Your Cloud VM &amp; Complete `localhost` OAuth Logins From Your Phone
-          </h2>
-
-          <div className="mt-4 space-y-4 text-slate-300 font-serif text-base leading-relaxed">
-            <p>
-              In <strong>Revision 4</strong>, we solved the two biggest hurdles developers hit when trying to run a cloud VM from an iPhone or Android on cellular networks:
-            </p>
-            <p>
-              <strong>Hurdle 1: How do you complete an OAuth login (`claude auth login` or `openclaw models auth login --provider openai`) on a remote headless VPS from your phone when the OAuth callback redirects to `http://localhost:1455`?</strong> When you tap the auth link inside mobile Termius or Blink Shell, mobile Safari opens `chatgpt.com` or `claude.ai`, authenticates via FaceID, and redirects to `http://localhost:1455/?code=...`. Simply <strong>copy that full `localhost` URL from mobile Safari&apos;s address bar and paste it back into your terminal prompt</strong> (or forward the port over Tailscale)—and your remote VM caches the OAuth session token! Even simpler, your companion Chinese Coding Plan key (`Z.ai GLM`, `Qwen Coder`, `Kimi Code`, `MiniMax M-Plan`) is a static token exported in `/root/.openclaw.env` that never expires every 10 days.
-            </p>
-            <p>
-              <strong>Hurdle 2: Stopping cellular TCP disconnects.</strong> Instead of exposing TCP Port 22 to brute-force bots and suffering 60-second terminal freezes whenever your phone switches from Wi-Fi to 5G, lock down your firewall (<code className="text-indigo-300 text-sm font-mono">ufw default deny incoming</code>) and connect over <strong>Tailscale WireGuard + UDP Mosh + Tmux/Zellij</strong>.
-            </p>
-          </div>
-
-          {/* Figure 3: Mobile Topology Diagram */}
-          <MobileTopologyFigure />
-
-          {/* Widget 4: Mobile Bootstrap Script Generator */}
-          <MobileControlWidget />
-        </section>
-
-        {/* Section 5: Interactive 5-Revision Assumption Challenge Viewer */}
-        <RevisionLogViewer />
-
-        {/* Section 6: Primary Sources & Verification Bibliography */}
-        <section id="sources" className="mt-16 rounded-2xl border border-slate-800 bg-slate-900/60 p-6 md:p-8">
-          <h3 className="text-xl font-bold text-white tracking-tight">
-            Verified Primary Sources &amp; Commercial Rate-Card Documentation (2026)
-          </h3>
-          <p className="text-xs text-slate-400 mt-1">
-            All paid subscription tiers, vCPU/RAM allocations, 5-hour quota structures, and microVM rates are cross-checked against official documentation:
+          <p className="mt-3 text-slate-300 font-serif text-base leading-relaxed">
+            Whether you start with a single $6.20 VPS or a $130 bare-metal box, the setup follows five clean steps.
           </p>
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-xs">
-            {[
-              { name: "Replit Core, Pro & Reserved VM Pricing", url: "https://replit.com/pricing", domain: "replit.com" },
-              { name: "Anthropic Claude Pro, Max, Ultra & Claude Code", url: "https://claude.com/pricing", domain: "claude.com" },
-              { name: "OpenAI Dots & ChatGPT Plus/Pro OAuth", url: "https://openai.com", domain: "openai.com" },
-              { name: "Google Jules Async Cloud VMs & AI Pro/Ultra", url: "https://jules.google", domain: "jules.google" },
-              { name: "xAI SuperGrok, Grok Build & Colossus API", url: "https://x.ai", domain: "x.ai" },
-              { name: "Cursor Pro, Pro+, Ultra & Background Agents", url: "https://cursor.com/pricing", domain: "cursor.com" },
-              { name: "Devin & Windsurf (Cognition Pro / Max)", url: "https://windsurf.com/pricing", domain: "windsurf.com" },
-              { name: "GitHub Codespaces & Copilot Pro+ / Max", url: "https://github.com/features/copilot/plans", domain: "github.com" },
-              { name: "Z.ai GLM-5.3 Flat-Rate Coding Plans", url: "https://z.ai", domain: "z.ai" },
-              { name: "Alibaba Model Studio Qwen Coder Plans", url: "https://www.alibabacloud.com", domain: "alibabacloud.com" },
-              { name: "Moonshot Kimi K2.5 Code Memberships", url: "https://kimi.moonshot.cn", domain: "kimi.moonshot.cn" },
-              { name: "MiniMax M-Plan (M2.5-Highspeed) Coding Subs", url: "https://www.minimax.io", domain: "minimax.io" },
-              { name: "Netcup VPS 1000 G11 & RS 2000 G11 NVMe", url: "https://www.netcup.com", domain: "netcup.com" },
-              { name: "Hetzner Cloud CAX ARM & CPX AMD EPYC", url: "https://www.hetzner.com/cloud", domain: "hetzner.com" },
-              { name: "Contabo High-RAM Cloud VPS 4 / 6 / 8", url: "https://contabo.com", domain: "contabo.com" },
-              { name: "E2B, Modal, Daytona, Fly Sprites & Cloudflare", url: "https://modal.com/pricing", domain: "modal.com" },
-              { name: "Steel.dev & Browserbase Remote Browser Fleets", url: "https://steel.dev/pricing", domain: "steel.dev" },
-              { name: "Vast.ai, RunPod & Lambda Labs Paid GPU Clouds", url: "https://www.runpod.io/pricing", domain: "runpod.io" }
-            ].map((src, i) => (
-              <a
-                key={i}
-                href={src.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between rounded-lg bg-slate-950/80 border border-slate-800/80 px-3 py-2 text-slate-300 hover:border-indigo-500/50 hover:text-white transition-all"
-              >
-                <span className="truncate pr-2">{src.name}</span>
-                <span className="text-[10px] font-mono text-indigo-400 shrink-0 flex items-center gap-1">
-                  {src.domain} <ExternalLink className="h-2.5 w-2.5" />
+
+          <div className="mt-6 space-y-5">
+            {/* Step 1 */}
+            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-5">
+              <h3 className="text-base font-bold text-white flex items-center gap-2">
+                <span className="h-6 w-6 rounded-full bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 font-mono text-xs flex items-center justify-center">
+                  1
                 </span>
-              </a>
-            ))}
+                Provision Paid Compute &amp; Lock Down the Firewall
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Spin up an Ubuntu 24.04 instance with at least <strong>4 vCPU and 8 GB RAM</strong> (2 GB–4 GB VMs choke as soon as you run Docker or a headless browser). Immediately install <strong>Tailscale</strong> and <strong>Mosh</strong>, then close public Port 22 so brute-force scanners cannot reach the box.
+              </p>
+              <pre className="mt-3 rounded-lg bg-slate-950 border border-slate-800 p-3.5 text-xs font-mono text-emerald-300 overflow-x-auto">
+                <code>{`apt-get update && apt-get install -y curl git ufw mosh tmux zellij docker.io
+curl -fsSL https://tailscale.com/install.sh | sh && tailscale up --ssh
+ufw default deny incoming && ufw default allow outgoing
+ufw allow in on tailscale0 && ufw allow 60000:60100/udp && ufw --force enable`}</code>
+              </pre>
+            </div>
+
+            {/* Step 2 */}
+            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-5">
+              <h3 className="text-base font-bold text-white flex items-center gap-2">
+                <span className="h-6 w-6 rounded-full bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 font-mono text-xs flex items-center justify-center">
+                  2
+                </span>
+                Install Your Agent Harness &amp; Authenticate Your Dual Subscriptions
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Install Node.js 22 alongside <strong>Claude Code</strong> and <strong>OpenClaw</strong>. Authenticate your primary US plan via CLI OAuth (on a phone, open the login URL in Safari, approve, and paste the resulting <code className="text-indigo-300">localhost</code> callback URL straight back into your terminal), then add your Chinese Coding Plan token for seamless 5-hour overflow.
+              </p>
+              <pre className="mt-3 rounded-lg bg-slate-950 border border-slate-800 p-3.5 text-xs font-mono text-indigo-200 overflow-x-auto">
+                <code>{`npm install -g @anthropics/claude-code openclaw happy-coder
+
+# Option A: Authenticate Claude Pro/Max via CLI and bridge to OpenClaw
+claude auth login
+openclaw models auth login --provider anthropic --method cli --set-default
+
+# Option B: Authenticate ChatGPT Plus/Pro via official OpenAI OAuth
+openclaw models auth login --provider openai
+
+# Add flat-rate companion Coding Plan (Z.ai GLM-5.3 / Qwen Coder / Kimi / MiniMax)
+echo 'ZAI_CODING_PLAN_KEY="your-flat-rate-subscription-key"' >> ~/.openclaw.env`}</code>
+              </pre>
+            </div>
+
+            {/* Step 3 */}
+            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-5">
+              <h3 className="text-base font-bold text-white flex items-center gap-2">
+                <span className="h-6 w-6 rounded-full bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 font-mono text-xs flex items-center justify-center">
+                  3
+                </span>
+                Attach Specialized Tools Only Where Needed (Browsers &amp; Heavy Build Hubs)
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Keep your agent container lean. For web automation on strict sites, point your agent to <strong>Browserbase</strong> or <strong>Steel.dev</strong> (or run Steel&apos;s open-source Docker image on a 16 GB node and run <code className="text-cyan-300">tailscale serve --bg 5173</code> so you can tap through 2FA prompts from your phone). For heavy engines like Unreal Engine 5, expose your 64–128 GB build box over Tailscale via a queued MCP endpoint with pre-warmed <code className="text-amber-300">git worktree</code> slots and a shared NVMe cache.
+              </p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-5">
+              <h3 className="text-base font-bold text-white flex items-center gap-2">
+                <span className="h-6 w-6 rounded-full bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 font-mono text-xs flex items-center justify-center">
+                  4
+                </span>
+                Connect Your Pocket Control Plane (Zero-Drop Mobile Operations)
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Never rely on raw TCP SSH on cellular networks—it freezes every time you switch from Wi-Fi to 5G. Connect from <strong>Blink Shell</strong> (iOS), <strong>Termius</strong> (iOS/Android), or <strong>Termux</strong> (Android) using UDP Mosh inside a persistent <code className="text-emerald-300">tmux</code> session. For hands-free commuting, pair your VM with <strong>Happy</strong> (1-tap push approvals for Claude Code diffs) or a private <strong>Telegram voice-note bot</strong> locked to your user ID.
+              </p>
+              <pre className="mt-3 rounded-lg bg-slate-950 border border-slate-800 p-3.5 text-xs font-mono text-cyan-300 overflow-x-auto">
+                <code>{`# From Blink Shell / Termius / Termux on your phone (with Tailscale active):
+mosh root@100.x.y.z -- tmux new -A -s factory`}</code>
+              </pre>
+            </div>
+          </div>
+        </section>
+
+        {/* 6. CONCLUSION */}
+        <section id="conclusion" className="scroll-mt-20 mb-14 space-y-5 font-serif text-base sm:text-[17px] leading-relaxed text-slate-300">
+          <div className="font-sans text-xs font-mono font-bold uppercase tracking-wider text-emerald-400">
+            05 • CONCLUSION
+          </div>
+          <h2 className="font-sans text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Own the Metal, Arbitrage the Quotas, Direct From Anywhere
+          </h2>
+
+          <p>
+            Setting up an AI factory is no longer a game of spending $5,000/month on cloud GPUs or burning unbounded per-token invoices. The builders shipping fastest in 2026 treat cloud compute and frontier models as two separate markets: they buy reliable, high-density commodity Linux hardware for pennies on the dollar, authenticate flat-rate US and Chinese subscriptions inside isolated workspaces, and reserve expensive GPU or 64 GB+ build iron for queued, high-utilization MCP bursts.
+          </p>
+
+          <p>
+            Start small this weekend: rent one paid 8 GB NVMe server, lock it behind Tailscale and Mosh, log in with your existing subscriptions, and run your first autonomous build from your phone. Once the loop clicks, scaling it into a multi-agent startup factory is just arithmetic.
+          </p>
+
+          <div className="pt-2 font-sans">
+            <a
+              href="#interactive-lab"
+              className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors"
+            >
+              Open the Interactive Calculators, 21-Provider Atlas &amp; Research Log
+              <ArrowDown className="h-4 w-4" />
+            </a>
           </div>
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-slate-800/80 bg-slate-950 py-10 text-xs text-slate-400">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      {/* Wide Container for the Tabbed Interactive Data Appendix & Calculators */}
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 pb-16">
+        <InteractiveAppendixTabs />
+      </div>
+
+      {/* Minimal Footer */}
+      <footer className="border-t border-slate-800/80 bg-slate-950 py-8 text-xs text-slate-500">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div>
-            <strong className="text-white">The 2026 Edge AI &amp; Cloud Sandbox Atlas</strong> • 100% Paid Commercial Tiers &amp; Subsidized US/CN Subscription Logins.
+            <strong className="text-slate-300">The Personal AI Factory Playbook</strong> • Built with Next.js &amp; Tailwind CSS.
           </div>
           <div className="flex items-center gap-4">
-            <a
-              href="planning/revision-1-initial-survey.md"
-              target="_blank"
-              className="hover:text-white underline"
-            >
-              Rev 1
+            <a href="#interactive-lab" className="hover:text-slate-200">
+              Data &amp; Calculators
             </a>
             <a
-              href="planning/revision-2-workload-taxonomy.md"
+              href="https://github.com/hafhaq/edge-ai-sandbox-atlas"
               target="_blank"
-              className="hover:text-white underline"
+              rel="noopener noreferrer"
+              className="hover:text-slate-200"
             >
-              Rev 2
-            </a>
-            <a
-              href="planning/revision-3-deepseek-arbitrage-and-sweet-spots.md"
-              target="_blank"
-              className="hover:text-white underline"
-            >
-              Rev 3
-            </a>
-            <a
-              href="planning/revision-4-mobile-control-plane.md"
-              target="_blank"
-              className="hover:text-white underline"
-            >
-              Rev 4
-            </a>
-            <a
-              href="planning/revision-5-final-synthesis.md"
-              target="_blank"
-              className="hover:text-white underline"
-            >
-              Rev 5
+              GitHub Repository
             </a>
           </div>
         </div>
